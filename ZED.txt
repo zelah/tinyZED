@@ -227,63 +227,123 @@ comment:
  
 (debug-sentence) "sentence"
 comment:
+#true
+(debug-sentence1) "sentence" nil
+
+(debug-sentence1) "sentence" "collect"
+comment:
 (002) "null?" "sentence"
 nil
  
-(debug-sentence) "sentence"
+(debug-sentence1) "sentence" "collect"
 comment:
 (003) "eqv?" #space (002) "car" "sentence"
-(debug-sentence) (002) "cdr" "sentence"
+(debug-sentence1) (002) "cdr" "sentence" "collect"
  
-(debug-sentence) "sentence"
+(debug-sentence1) "sentence" "collect"
 comment:
 (003) "eqv?" #( (002) "car" "sentence"
-(debug-sentence1) "sentence" (gather-verb) (002) "cdr" "sentence"
+(debug-sentence1a) "sentence" (gather-verb) (002) "cdr" "sentence" "collect"
  
-(debug-sentence) "sentence"
+(debug-sentence1) "sentence" "collect"
 comment:
 #true
-(debug-sentence2) "sentence" (gather-noun) "sentence"
+(debug-sentence1b) "sentence" (gather-noun) "sentence" "collect"
  
-(debug-sentence1) "sentence" "gather-verb"
+(debug-sentence1a) "sentence" "gather-verb" "collect"
 comment:
 #true
-(debug-sentence1a) "sentence" "gather-verb" (verb) "gather-verb"
+(debug-sentence1aa) "sentence" "gather-verb" (verb) "gather-verb" "collect"
+
+(debug-sentence1aa) "sentence" "gather-verb" "verb" "collect"
+comment:
+(002) "null?" "sentence"
+nil
  
-(debug-sentence1a) "sentence" "gather-verb" "verb"
+(debug-sentence1aa) "sentence" "gather-verb" "verb" "collect"
 comment:
 (004) "or" (003) "eq?" "verb" "'c" (003) "eq?" "verb" "'let*" (004) "and" (003) "eqv?" #0 (002) "car" "gather-verb" (digit?) (002) "cadr" "gather-verb" (digit?) (002) "caddr" "gather-verb"
-(003) "cons" (002) "list" "'ZEDgrr" (003) "cons" (004) "string-append" ""\""" (002) "list->string" (rd) nil "append" (003) "map" slashefy "sentence" ""\""" (003) "cons" (namefy) (002) "list" "verb" (read-sentence) (tails) (003) "+" 2 (002) "length" "gather-verb" "sentence"
+(003) "cons" 
+      (002) "list" "'ZEDgrr" 
+      (003) "cons" 
+            (004) "string-append"
+                  ""\""" 
+                  (002) "list->string" 
+                        (rd) nil 
+                             "append" 
+                             (003) "map" 
+                                   slashefy 
+                                   "sentence"
+                  ""\""" 
+            (003) "cons" 
+                  (namefy) (002) "list" "verb" 
+                  (read-sentence1) 
+                    (tails) 
+                      (003) "+" 
+                            2
+                            (002) "length" 
+                                  "gather-verb" 
+                      "sentence"
+                    "collect"
  
-(debug-sentence1a) "sentence" "gather-verb" "verb"
+(debug-sentence1aa) "sentence" "gather-verb" "verb" "collect"
 comment:
 #true
-(003) "cons" (002) "list" "'ZEDdr" (003) "cons" (002) "list" "'ZEDgrr" (003) "cons" (004) "string-append" ""\""" (002) "list->string" (rd) nil "append" (003) "map" slashefy "sentence" ""\""" (003) "cons" (namefy) (002) "list" "verb" (debug-sentence) (tails) (003) "+" 2 (002) "length" "gather-verb" "sentence"
+(003) "cons"
+      (002) "list" "'ZEDdr" 
+      (003) "cons"
+            (002) "list" "'ZEDgrr" 
+            (003) "cons" 
+                  (004) "string-append" 
+                        ""\""" 
+                        (002) "list->string" 
+                              (rd) nil 
+                                   "append" 
+                                   (003) "map" 
+                                         slashefy 
+                                         "sentence" 
+                        ""\""" 
+                  (003) 
+                    "cons" 
+                    (namefy) (002) "list" "verb" 
+                    (debug-sentence1) 
+                      (tails) 
+                        (003) "+" 
+                              2
+                              (002) "length" 
+                                    "gather-verb" 
+                        "sentence"
+                      "collect"
  
-(debug-sentence2) "sentence" "gather-noun"
+(debug-sentence1b) "sentence" "gather-noun" "collect"
 comment:
 #true
-(003) "cons" (namefy) (noun) "gather-noun" (debug-sentence) (tails) (002) "length" "gather-noun" "sentence"
+(003) "cons" (namefy) (noun) "gather-noun" (debug-sentence1) (tails) (002) "length" "gather-noun" "sentence" "collect"
  
 (debug-sentences) "sentences"
+comment:
+#true
+(debug-sentences1) "sentences" nil
+
+(debug-sentences1) "sentences" "collect"
 comment:
 (002) "null?" "sentences"
 nil
  
-(debug-sentences) "sentences"
+(debug-sentences1) "sentences" "collect"
 comment:
 #true
-(debug-sentences1) "sentences" (002) "cdr" (gather-verb) (002) "car" "sentences"
+(debug-sentences1a) "sentences" (002) "cdr" (gather-verb) (002) "car" "sentences" "collect"
  
-(debug-sentences1) "sentences" "gather-verb"
+(debug-sentences1a) "sentences" "gather-verb" "collect"
 comment:
 (008) "or" (003) "equal?" "gather-verb" (004) "list" #p #r #1 (003) "equal?" "gather-verb" (003) "list" #p #r (003) "equal?" "gather-verb" (004) "list" #d #r #1 (003) "equal?" "gather-verb" (003) "list" #d #r (003) "equal?" "gather-verb" (004) "list" #d #r #r (003) "equal?" "gather-verb" (003) "list" #g #r (003) "equal?" "gather-verb" (004) "list" #g #r #r
-(003) "cons" (read-sentence) (002) "car" "sentences" (003) "cons" (read-sentence) (002) "cadr" "sentences" (003) "cons" (read-sentence) (002) "caddr" "sentences" (debug-sentences) (002) "cdddr" "sentences"
+(003) "cons" (read-sentence1) (002) "car" "sentences" "collect" (003) "cons" (read-sentence1) (002) "cadr" "sentences" "collect" (003) "cons" (read-sentence1) (002) "caddr" "sentences" "collect" (debug-sentences1) (002) "cdddr" "sentences" "collect"
  
-(debug-sentences1) "sentences" "gather-verb"
+(debug-sentences1a) "sentences" "gather-verb" "collect"
 comment:
 #true
-(003) "cons" (read-sentence) (002) "car" "sentences" (003) "cons" (debug-sentence) (002) "cadr" "sentences" (003) "cons" (debug-sentence) (002) "caddr" "sentences" (debug-sentences) (002) "cdddr" "sentences"
+(003) "cons" (read-sentence1) (002) "car" "sentences" "collect" (003) "cons" (debug-sentence1) (002) "cadr" "sentences" "collect" (003) "cons" (debug-sentence1) (002) "caddr" "sentences" "collect" (debug-sentences1) (002) "cdddr" "sentences" "collect"
  
 (digit?) "character"
 comment:
@@ -764,41 +824,51 @@ nil
 comment:
 #true
 (003) "cons" "character" (read-all!)
- 
+
 (read-sentence) "sentence"
+comment:
+#true
+(read-sentence1) "sentence" nil
+ 
+(read-sentence1) "sentence" "collect"
 comment:
 (002) "null?" "sentence"
 nil
  
-(read-sentence) "sentence"
+(read-sentence1) "sentence" "collect"
 comment:
 (003) "eqv?" #space (002) "car" "sentence"
-(read-sentence) (002) "cdr" "sentence"
+(read-sentence1) (002) "cdr" "sentence" "collect"
  
-(read-sentence) "sentence"
+(read-sentence1) "sentence" "collect"
 comment:
 (003) "eqv?" #( (002) "car" "sentence"
-(read-sentence1) "sentence" (gather-verb) (002) "cdr" "sentence"
+(read-sentence1a) "sentence" (gather-verb) (002) "cdr" "sentence" "collect"
  
-(read-sentence) "sentence"
+(read-sentence1) "sentence" "collect"
 comment:
 #true
-(read-sentence2) "sentence" (gather-noun) "sentence"
+(read-sentence1b) "sentence" (gather-noun) "sentence" "collect"
  
-(read-sentence1) "sentence" "gather-verb"
+(read-sentence1a) "sentence" "gather-verb" "collect"
 comment:
 #true
-(003) "cons" (namefy) (002) "list" (verb) "gather-verb" (read-sentence) (tails) (003) "+" 2 (002) "length" "gather-verb" "sentence"
+(003) "cons" (namefy) (002) "list" (verb) "gather-verb" (read-sentence1) (tails) (003) "+" 2 (002) "length" "gather-verb" "sentence" "collect"
  
-(read-sentence2) "sentence" "gather-noun"
+(read-sentence1b) "sentence" "gather-noun" "collect"
 comment:
 #true
-(003) "cons" (namefy) (noun) "gather-noun" (read-sentence) (tails) (002) "length" "gather-noun" "sentence"
+(003) "cons" (namefy) (noun) "gather-noun" (read-sentence1) (tails) (002) "length" "gather-noun" "sentence" "collect"
  
 (read-sentences) "sentences"
 comment:
 #true
-(003) "map" read-sentence "sentences"
+(read-sentences1) "sentences" nil
+
+(read-sentences1) "sentences" "collect"
+comment:
+#true
+(map-with) read-sentence1 "sentences" "collect"
  
 (ready-clause) "clause"
 comment:
