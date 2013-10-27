@@ -392,16 +392,21 @@ comment:
 comment:
 #true
 (011) "or" (003) "eqv?" #0 "character" (003) "eqv?" #1 "character" (003) "eqv?" #2 "character" (003) "eqv?" #3 "character" (003) "eqv?" #4 "character" (003) "eqv?" #5 "character" (003) "eqv?" #6 "character" (003) "eqv?" #7 "character" (003) "eqv?" #8 "character" (003) "eqv?" #9 "character"
- 
-(discard-comments) "program"
-comment:
-(002) "null?" "program"
-nil
- 
+
 (discard-comments) "program"
 comment:
 #true
-(003) "cons" (002) "car" "program" (003) "cons" (002) "caddr" "program" (003) "cons" (002) "cadddr" "program" (discard-comments) (002) "cddddr" "program"
+(002) "reverse" (discard-comments1) "program" nil
+ 
+(discard-comments1) "program" "collect"
+comment:
+(002) "null?" "program"
+"collect"
+ 
+(discard-comments1) "program" "collect"
+comment:
+#true
+(discard-comments1) (002) "cddddr" "program" (003) "cons" (002) "cadddr" "program" (003) "cons" (002) "caddr" "program" (003) "cons" (002) "car" "program" "collect"
  
 (dr) "value"
 comment:
@@ -437,21 +442,26 @@ comment:
 comment:
 #true
 (fi) "function" (!) "list"
- 
-(filter) "predicate" "list"
-comment:
-(002) "null?" "list"
-nil
- 
-(filter) "predicate" "list"
-comment:
-(002) "predicate" (002) "car" "list"
-(003) "cons" (002) "car" "list" (filter) "predicate" (002) "cdr" "list"
- 
+
 (filter) "predicate" "list"
 comment:
 #true
-(filter) "predicate" (002) "cdr" "list"
+(002) "reverse" (filter1) "predicate" "list" nil
+ 
+(filter1) "predicate" "list" "collect"
+comment:
+(002) "null?" "list"
+"collect"
+ 
+(filter1) "predicate" "list" "collect"
+comment:
+(002) "predicate" (002) "car" "list"
+(filter1) "predicate" (002) "cdr" "list" (003) "cons" (002) "car" "list" "collect"
+ 
+(filter1) "predicate" "list" "collect"
+comment:
+#true
+(filter1) "predicate" (002) "cdr" "list" "collect"
  
 (first) "integer" "list"
 comment:
