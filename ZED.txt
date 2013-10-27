@@ -35,20 +35,20 @@ comment:
 #true
 (002) "reverse" (add-between1) "item" "list" nil
 
-(add-between1) "item" "list" "accumulator"
+(add-between1) "item" "list" "collect"
 comment:
 (002) "null?" "list"
-"accumulator"
+"collect"
 
-(add-between1) "item" "list" "accumulator"
+(add-between1) "item" "list" "collect"
 comment:
 (002) "null?" (002) "cdr" "list"
-(003) "cons" (002) "car" "list" "accumulator"
+(003) "cons" (002) "car" "list" "collect"
 
-(add-between1) "item" "list" "accumulator"
+(add-between1) "item" "list" "collect"
 comment:
 #true
-(add-between1) "item" (002) "cdr" "list" (003) "cons" "item" (003) "cons" (002) "car" "list" "accumulator"
+(add-between1) "item" (002) "cdr" "list" (003) "cons" "item" (003) "cons" (002) "car" "list" "collect"
 
 (alpha)
 comment:
@@ -80,30 +80,30 @@ comment:
 #true
 (002) "reverse" (by-four1) "sentences" nil
 
-(by-four1) "sentences" "accumulator"
+(by-four1) "sentences" "collect"
 comment:
 (002) "null?" "sentences"
-"accumulator"
+"collect"
 
-(by-four1) "sentences" "accumulator"
+(by-four1) "sentences" "collect"
 comment:
 #true
-(by-four1) (002) "cddddr" "sentences" (003) "cons" (005) "list" (002) "car" "sentences" (002) "cadr" "sentences" (002) "caddr" "sentences" (002) "cadddr" "sentences" "accumulator"
+(by-four1) (002) "cddddr" "sentences" (003) "cons" (005) "list" (002) "car" "sentences" (002) "cadr" "sentences" (002) "caddr" "sentences" (002) "cadddr" "sentences" "collect"
 
 (by-three) "sentences"
 comment:
 #true
 (002) "reverse" (by-three1) "sentences" nil
 
-(by-three1) "sentences" "accumulator"
+(by-three1) "sentences" "collect"
 comment:
 (002) "null?" "sentences"
-"accumulator"
+"collect"
 
-(by-three1) "sentences" "accumulator"
+(by-three1) "sentences" "collect"
 comment:
 #true
-(by-three1) (002) "cdddr" "sentences" (003) "cons" (004) "list" (002) "car" "sentences" (002) "cadr" "sentences" (002) "caddr" "sentences" "accumulator"
+(by-three1) (002) "cdddr" "sentences" (003) "cons" (004) "list" (002) "car" "sentences" (002) "cadr" "sentences" (002) "caddr" "sentences" "collect"
  
 (character-less?) "character1" "character2"
 comment:
@@ -1000,20 +1000,20 @@ comment:
 #true
 (sentences1) "program" nil
  
-(sentences1) "program" "accumulator"
+(sentences1) "program" "collect"
 comment:
 (002) "null?" "program"
 nil
  
-(sentences1) "program" "accumulator"
+(sentences1) "program" "collect"
 comment:
 (003) "eqv?" #newline (002) "car" "program"
-(003) "cons" (002) "reverse" "accumulator" (sentences1) (002) "cdr" "program" nil
+(003) "cons" (002) "reverse" "collect" (sentences1) (002) "cdr" "program" nil
  
-(sentences1) "program" "accumulator"
+(sentences1) "program" "collect"
 comment:
 #true
-(sentences1) (002) "cdr" "program" (003) "cons" (002) "car" "program" "accumulator"
+(sentences1) (002) "cdr" "program" (003) "cons" (002) "car" "program" "collect"
  
 (slashefy) "character"
 comment:
