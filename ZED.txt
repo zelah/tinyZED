@@ -612,16 +612,21 @@ comment:
 comment:
 #true
 "program"
- 
-(map-with) "function" "list" "extra"
-comment:
-(002) "null?" "list"
-nil
- 
+
 (map-with) "function" "list" "extra"
 comment:
 #true
-(003) "cons" (003) "function" (002) "car" "list" "extra" (map-with) "function" (002) "cdr" "list" "extra"
+(002) "reverse" (map-with1) "function" "list" "extra" nil
+ 
+(map-with1) "function" "list" "extra" "collect"
+comment:
+(002) "null?" "list"
+"collect"
+ 
+(map-with1) "function" "list" "extra" "collect"
+comment:
+#true
+(map-with1) "function" (002) "cdr" "list" "extra" (003) "cons" (003) "function" (002) "car" "list" "extra" "collect"
  
 (merge) "comparator" "list1" "list2"
 comment:
