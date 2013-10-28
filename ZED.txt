@@ -526,7 +526,7 @@ comment:
 (flexefy1) "part"
 comment:
 (003) "equal?" "part" (007) "list" ## #f #a #l #s #e
-"#f"
+#false
  
 (flexefy1) "part"
 comment:
@@ -612,36 +612,6 @@ comment:
 comment:
 #true
 "program"
- 
-(list->string) "list"
-comment:
-#true
-(003) "apply" "string-append" (flatten) (list->string1) "list"
- 
-(list->string1) "datum"
-comment:
-(002) "null?" "datum"
-nil
- 
-(list->string1) "datum"
-comment:
-(002) "not" (002) "pair?" "datum"
-(list->string1) (002) "list" "datum"
- 
-(list->string1) "datum"
-comment:
-(002) "null?" (1) "datum"
-(list->string1) (!) "datum"
- 
-(list->string1) "datum"
-comment:
-(002) "pair?" (1) "datum"
-(003) "cons" (list->string1) (1) "datum" (list->string1) (!) "datum"
- 
-(list->string1) "datum"
-comment:
-#true
-(003) "cons" (003) "with-output-to-string" """" (003) "lambda" "()" (002) "display" (1) "datum" (list->string1) (!) "datum"
  
 (map-with) "function" "list" "extra"
 comment:
