@@ -480,19 +480,24 @@ comment:
  
 (flatten) "object"
 comment:
+#true
+(flatten1) "object" nil
+
+(flatten1) "object" "collect"
+comment:
 (002) "null?" "object"
-nil
+"collect"
  
-(flatten) "object"
+(flatten1) "object" "collect"
 comment:
 (002) "not" (002) "pair?" "object"
-(002) "list" "object"
+(003) "cons" "object" "collect"
  
-(flatten) "object"
+(flatten1) "object" "collect"
 comment:
 #true
-(003) "append" (flatten) (002) "car" "object" (flatten) (002) "cdr" "object"
- 
+(flatten1) (002) "car" "object" (003) "append" (flatten1) (002) "cdr" "object" "collect"
+
 (flexefy) "part"
 comment:
 (002) "symbol?" "part"
