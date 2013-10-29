@@ -630,23 +630,28 @@ comment:
  
 (merge) "comparator" "list1" "list2"
 comment:
+#true
+(merge1) "comparator" "list1" "list2" nil
+
+(merge1) "comparator" "list1" "list2" "collect"
+comment:
 (002) "null?" "list2"
-"list1"
+(003) "append" (002) "reverse" "collect" "list1"
  
-(merge) "comparator" "list1" "list2"
+(merge1) "comparator" "list1" "list2" "collect"
 comment:
 (002) "null?" "list1"
-"list2"
+(003) "append" (002) "reverse" "collect" "list2"
  
-(merge) "comparator" "list1" "list2"
+(merge1) "comparator" "list1" "list2" "collect"
 comment:
 (003) "comparator" (002) "car" "list2" (002) "car" "list1"
-(003) "cons" (002) "car" "list2" (merge) "comparator" "list1" (002) "cdr" "list2"
+(merge1) "comparator" "list1" (002) "cdr" "list2" (003) "cons" (002) "car" "list2" "collect"
  
-(merge) "comparator" "list1" "list2"
+(merge1) "comparator" "list1" "list2" "collect"
 comment:
 #true
-(003) "cons" (002) "car" "list1" (merge) "comparator" (002) "cdr" "list1" "list2"
+(merge1) "comparator" (002) "cdr" "list1" "list2" (003) "cons" (002) "car" "list1" "collect"
  
 (mp) "function" "list"
 comment:
