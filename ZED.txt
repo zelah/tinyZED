@@ -702,26 +702,31 @@ comment:
 comment:
 #true
 (newline-space1a) "transformed"
- 
-(newline-space-tab-repeats) "program"
-comment:
-(003) "or" (002) "null?" "program" (002) "null?" (002) "cdr" "program"
-"program"
- 
-(newline-space-tab-repeats) "program"
-comment:
-(003) "and" (003) "eqv?" #newline (002) "car" "program" (003) "eqv?" #newline (002) "cadr" "program"
-(newline-space-tab-repeats) (002) "cdr" "program"
- 
-(newline-space-tab-repeats) "program"
-comment:
-(003) "and" (003) "or" (003) "eqv?" #space (002) "car" "program" (003) "eqv?" #tab (002) "car" "program" (003) "or" (003) "eqv?" #space (002) "cadr" "program" (003) "eqv?" #tab (002) "cadr" "program"
-(newline-space-tab-repeats) (002) "cdr" "program"
- 
+
 (newline-space-tab-repeats) "program"
 comment:
 #true
-(003) "cons" (002) "car" "program" (newline-space-tab-repeats) (002) "cdr" "program"
+(002) "reverse" (newline-space-tab-repeats1) "program" nil
+ 
+(newline-space-tab-repeats1) "program" "collect"
+comment:
+(003) "or" (002) "null?" "program" (002) "null?" (002) "cdr" "program"
+(003) "append" "program" "collect"
+ 
+(newline-space-tab-repeats1) "program" "collect"
+comment:
+(003) "and" (003) "eqv?" #newline (002) "car" "program" (003) "eqv?" #newline (002) "cadr" "program"
+(newline-space-tab-repeats1) (002) "cdr" "program" "collect"
+ 
+(newline-space-tab-repeats1) "program" "collect"
+comment:
+(003) "and" (003) "or" (003) "eqv?" #space (002) "car" "program" (003) "eqv?" #tab (002) "car" "program" (003) "or" (003) "eqv?" #space (002) "cadr" "program" (003) "eqv?" #tab (002) "cadr" "program"
+(newline-space-tab-repeats1) (002) "cdr" "program" "collect"
+ 
+(newline-space-tab-repeats1) "program" "collect"
+comment:
+#true
+(newline-space-tab-repeats1) (002) "cdr" "program" (003) "cons" (002) "car" "program" "collect"
  
 (newline-space1ab) "program" "collect"
 comment:
