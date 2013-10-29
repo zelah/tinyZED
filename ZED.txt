@@ -677,26 +677,31 @@ comment:
 comment:
 #true
 (flexefy) "part"
- 
+
 (newline-space) "program"
 comment:
 #true
-(003) "append" (newline-space1) "program" (002) "list" #newline
+(newline-space1) "program" nil
  
 (newline-space1) "program" "collect"
 comment:
 #true
-(newline-space1a) "program" (newline-space1b) "program" "collect"
+(003) "append" (newline-space1a) "program" "collect" (002) "list" #newline
  
-(newline-space1a) "program" "transformed" "collect"
+(newline-space1a) "program" "collect"
+comment:
+#true
+(newline-space1aa) "program" (newline-space1ab) "program" "collect" "collect"
+ 
+(newline-space1aa) "program" "transformed" "collect"
 comment:
 (003) "equal?" "program" "transformed"
 "program"
  
-(newline-space1a) "program" "transformed" "collect"
+(newline-space1aa) "program" "transformed" "collect"
 comment:
 #true
-(newline-space1) "transformed" "collect"
+(newline-space1a) "transformed" "collect"
  
 (newline-space-tab-repeats) "program"
 comment:
@@ -718,30 +723,30 @@ comment:
 #true
 (003) "cons" (002) "car" "program" (newline-space-tab-repeats) (002) "cdr" "program"
  
-(newline-space1b) "program"
+(newline-space1ab) "program" "collect"
 comment:
 (002) "null?" "program"
 nil
  
-(newline-space1b) "program"
+(newline-space1ab) "program" "collect"
 comment:
 (002) "null?" (002) "cdr" "program"
 "program"
  
-(newline-space1b) "program"
+(newline-space1ab) "program" "collect"
 comment:
 (003) "and" (003) "eqv?" #newline (002) "car" "program" (003) "or" (003) "eqv?" #space (002) "cadr" "program" (003) "eqv?" #tab (002) "cadr" "program"
-(newline-space1b) (002) "cdr" "program"
+(newline-space1ab) (002) "cdr" "program" "collect"
  
-(newline-space1b) "program"
+(newline-space1ab) "program" "collect"
 comment:
 (003) "eqv?" #newline (002) "car" "program"
-(003) "cons" #newline (newline-space1b) (002) "cdr" "program"
+(003) "cons" #newline (newline-space1ab) (002) "cdr" "program" "collect"
  
-(newline-space1b) "program"
+(newline-space1ab) "program" "collect"
 comment:
 #true
-(003) "cons" (002) "car" "program" (newline-space1b) (002) "cdr" "program"
+(003) "cons" (002) "car" "program" (newline-space1ab) (002) "cdr" "program" "collect"
  
 (newlines) "clauses"
 comment:
