@@ -681,27 +681,27 @@ comment:
 (newline-space) "program"
 comment:
 #true
-(newline-space1) "program" nil
+(newline-space1) "program"
  
-(newline-space1) "program" "collect"
+(newline-space1) "program"
 comment:
 #true
-(003) "append" (newline-space1a) "program" "collect" (002) "list" #newline
+(003) "cons" #newline (newline-space1a) "program"
  
-(newline-space1a) "program" "collect"
+(newline-space1a) "program"
 comment:
 #true
-(newline-space1aa) "program" (newline-space1ab) "program" "collect" "collect"
+(newline-space1aa) "program" (002) "reverse" (newline-space1ab) "program" nil
  
-(newline-space1aa) "program" "transformed" "collect"
+(newline-space1aa) "program" "transformed"
 comment:
 (003) "equal?" "program" "transformed"
 "program"
  
-(newline-space1aa) "program" "transformed" "collect"
+(newline-space1aa) "program" "transformed"
 comment:
 #true
-(newline-space1a) "transformed" "collect"
+(newline-space1a) "transformed"
  
 (newline-space-tab-repeats) "program"
 comment:
@@ -726,12 +726,12 @@ comment:
 (newline-space1ab) "program" "collect"
 comment:
 (002) "null?" "program"
-nil
+"collect"
  
 (newline-space1ab) "program" "collect"
 comment:
 (002) "null?" (002) "cdr" "program"
-"program"
+(003) "cons" (002) "car" "program" "collect"
  
 (newline-space1ab) "program" "collect"
 comment:
@@ -740,13 +740,8 @@ comment:
  
 (newline-space1ab) "program" "collect"
 comment:
-(003) "eqv?" #newline (002) "car" "program"
-(003) "cons" #newline (newline-space1ab) (002) "cdr" "program" "collect"
- 
-(newline-space1ab) "program" "collect"
-comment:
 #true
-(003) "cons" (002) "car" "program" (newline-space1ab) (002) "cdr" "program" "collect"
+(newline-space1ab) (002) "cdr" "program" (003) "cons" (002) "car" "program" "collect"
  
 (newlines) "clauses"
 comment:
