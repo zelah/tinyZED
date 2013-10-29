@@ -681,22 +681,22 @@ comment:
 (newline-space) "program"
 comment:
 #true
-(003) "append" (newline-space-again) "program" (002) "list" #newline
+(003) "append" (newline-space1) "program" (002) "list" #newline
  
-(newline-space-again) "program"
+(newline-space1) "program" "collect"
 comment:
 #true
-(newline-space-again1) "program" (newline-space1) "program"
+(newline-space1a) "program" (newline-space1b) "program" "collect"
  
-(newline-space-again1) "program" "transformed"
+(newline-space1a) "program" "transformed" "collect"
 comment:
 (003) "equal?" "program" "transformed"
 "program"
  
-(newline-space-again1) "program" "transformed"
+(newline-space1a) "program" "transformed" "collect"
 comment:
 #true
-(newline-space-again) "transformed"
+(newline-space1) "transformed" "collect"
  
 (newline-space-tab-repeats) "program"
 comment:
@@ -718,30 +718,30 @@ comment:
 #true
 (003) "cons" (002) "car" "program" (newline-space-tab-repeats) (002) "cdr" "program"
  
-(newline-space1) "program"
+(newline-space1b) "program"
 comment:
 (002) "null?" "program"
 nil
  
-(newline-space1) "program"
+(newline-space1b) "program"
 comment:
 (002) "null?" (002) "cdr" "program"
 "program"
  
-(newline-space1) "program"
+(newline-space1b) "program"
 comment:
 (003) "and" (003) "eqv?" #newline (002) "car" "program" (003) "or" (003) "eqv?" #space (002) "cadr" "program" (003) "eqv?" #tab (002) "cadr" "program"
-(newline-space1) (002) "cdr" "program"
+(newline-space1b) (002) "cdr" "program"
  
-(newline-space1) "program"
+(newline-space1b) "program"
 comment:
 (003) "eqv?" #newline (002) "car" "program"
-(003) "cons" #newline (newline-space1) (002) "cdr" "program"
+(003) "cons" #newline (newline-space1b) (002) "cdr" "program"
  
-(newline-space1) "program"
+(newline-space1b) "program"
 comment:
 #true
-(003) "cons" (002) "car" "program" (newline-space1) (002) "cdr" "program"
+(003) "cons" (002) "car" "program" (newline-space1b) (002) "cdr" "program"
  
 (newlines) "clauses"
 comment:
@@ -958,12 +958,12 @@ comment:
 (schemefy1aa) "expression" "arity-hash" "stack" "function" "arity"
 comment:
 (gather-count?) "function"
-(schemefy1) (pop) "expression" "arity-hash" (push) (zed->gambit) (first) "arity" "stack" (zed->gambit) (tails) "arity" "stack"
+(schemefy1) (pop) "expression" "arity-hash" (push) (zed->scheme) (first) "arity" "stack" (zed->scheme) (tails) "arity" "stack"
  
 (schemefy1aa) "expression" "arity-hash" "stack" "function" "arity"
 comment:
 #true
-(schemefy1) (pop) "expression" "arity-hash" (push) (push) "function" (zed->gambit) (first) "arity" "stack" (zed->gambit) (tails) "arity" "stack"
+(schemefy1) (pop) "expression" "arity-hash" (push) (push) "function" (zed->scheme) (first) "arity" "stack" (zed->scheme) (tails) "arity" "stack"
  
 (sentence-less?) "sentence1" "sentence2"
 comment:
@@ -1200,15 +1200,15 @@ comment:
 #true
 (003) "begin" (002) "write-char" (002) "car" "program" (write-all!) (002) "cdr" "program"
  
-(zed->gambit) "value"
+(zed->scheme) "value"
 comment:
 (002) "not" (002) "pair?" "value"
 "value"
  
-(zed->gambit) "value"
+(zed->scheme) "value"
 comment:
 #true
-(003) "cons" (zed->gambit) (1) "value" (zed->gambit) (!) "value"
+(003) "cons" (zed->scheme) (1) "value" (zed->scheme) (!) "value"
  
 (zedefy) "string"
 comment:
