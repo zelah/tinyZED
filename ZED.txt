@@ -851,17 +851,22 @@ comment:
 (read-all!)
 comment:
 #true
-(read-all!1) (001) "read-char"
- 
-(read-all!1) "character"
-comment:
-(002) "eof-object?" "character"
-nil
- 
-(read-all!1) "character"
+(002) "reverse" (read-all!1) nil
+
+(read-all!1) "collect"
 comment:
 #true
-(003) "cons" "character" (read-all!)
+(read-all!1a) (001) "read-char" "collect"
+ 
+(read-all!1a) "character" "collect"
+comment:
+(002) "eof-object?" "character"
+"collect"
+ 
+(read-all!1a) "character" "collect"
+comment:
+#true
+(read-all!1) (003) "cons" "character" "collect"
  
 (read-sentence) "sentence"
 comment:
