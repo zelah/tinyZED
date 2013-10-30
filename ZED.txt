@@ -1,10 +1,10 @@
 ;;; ZED.scm
-
+ 
 (force1) "value"
 comment:
 (002) "promise?" "value"
 (002) "force" "value"
-
+ 
 (force1) "value"
 comment:
 #true
@@ -24,32 +24,32 @@ comment:
 comment:
 #true
 (003) "eqv?" "value1" "value2"
-
+ 
 (add-between-ra) "list" "item"
 comment:
 #true
 (002) "reverse" (add-between1) "item" "list" nil
-
+ 
 (add-between) "item" "list"
 comment:
 #true
 (002) "reverse" (add-between1) "item" "list" nil
-
+ 
 (add-between1) "item" "list" "collect"
 comment:
 (002) "null?" "list"
 "collect"
-
+ 
 (add-between1) "item" "list" "collect"
 comment:
 (002) "null?" (002) "cdr" "list"
 (003) "cons" (002) "car" "list" "collect"
-
+ 
 (add-between1) "item" "list" "collect"
 comment:
 #true
 (add-between1) "item" (002) "cdr" "list" (003) "cons" "item" (003) "cons" (002) "car" "list" "collect"
-
+ 
 (alpha)
 comment:
 #true
@@ -79,27 +79,27 @@ comment:
 comment:
 #true
 (002) "reverse" (by-four1) "sentences" nil
-
+ 
 (by-four1) "sentences" "collect"
 comment:
 (002) "null?" "sentences"
 "collect"
-
+ 
 (by-four1) "sentences" "collect"
 comment:
 #true
 (by-four1) (002) "cddddr" "sentences" (003) "cons" (005) "list" (002) "car" "sentences" (002) "cadr" "sentences" (002) "caddr" "sentences" (002) "cadddr" "sentences" "collect"
-
+ 
 (by-three) "sentences"
 comment:
 #true
 (002) "reverse" (by-three1) "sentences" nil
-
+ 
 (by-three1) "sentences" "collect"
 comment:
 (002) "null?" "sentences"
 "collect"
-
+ 
 (by-three1) "sentences" "collect"
 comment:
 #true
@@ -144,7 +144,7 @@ comment:
 comment:
 (003) "eq?" (clause-name) "clause1" (clause-name) "clause2"
 (clause-name) "clause1"
-
+ 
 (combine-all) "program"
 comment:
 #true
@@ -203,13 +203,8 @@ comment:
 (comp2)
 comment:
 #true
-(comp2a) (combine-program-clauses) (by-three) (debug-sentences) (discard-comments) (function-sort) (sentences) (leading-newline) (space-newline) (tab-replace) (newline-space-tab-repeats) (newline-space) (filter) not-return? (read-all!)
+(comp1a) (combine-program-clauses) (by-three) (debug-sentences) (discard-comments) (function-sort) (sentences) (leading-newline) (space-newline) (tab-replace) (newline-space-tab-repeats) (newline-space) (filter) not-return? (read-all!)
  
-(comp2a) "combined"
-comment:
-#true
-(comp1aa) (programize) "combined" (arity-hash) "combined"
-
 (condefy) "expressions"
 comment:
 #true
@@ -229,7 +224,7 @@ comment:
 comment:
 #true
 (002) "reverse" (debug-sentence1) "sentence" nil
-
+ 
 (debug-sentence1) "sentence" "collect"
 comment:
 (002) "null?" "sentence"
@@ -254,7 +249,7 @@ comment:
 comment:
 #true
 (debug-sentence1aa) "sentence" "gather-verb" (verb) "gather-verb" "collect"
-
+ 
 (debug-sentence1aa) "sentence" "gather-verb" "verb" "collect"
 comment:
 (002) "null?" "sentence"
@@ -328,7 +323,7 @@ comment:
 comment:
 #true
 (002) "reverse" (debug-sentences1) "sentences" nil
-
+ 
 (debug-sentences1) "sentences" "collect"
 comment:
 (002) "null?" "sentences"
@@ -362,7 +357,7 @@ comment:
                              (002) "car" "sentences" 
                              "collect" 
                          "collect"
-
+ 
  
 (debug-sentences1a) "sentences" "gather-verb" "collect"
 comment:
@@ -392,7 +387,7 @@ comment:
 comment:
 #true
 (011) "or" (003) "eqv?" #0 "character" (003) "eqv?" #1 "character" (003) "eqv?" #2 "character" (003) "eqv?" #3 "character" (003) "eqv?" #4 "character" (003) "eqv?" #5 "character" (003) "eqv?" #6 "character" (003) "eqv?" #7 "character" (003) "eqv?" #8 "character" (003) "eqv?" #9 "character"
-
+ 
 (discard-comments) "program"
 comment:
 #true
@@ -442,7 +437,7 @@ comment:
 comment:
 #true
 (fi) "function" (!) "list"
-
+ 
 (filter) "predicate" "list"
 comment:
 #true
@@ -482,7 +477,7 @@ comment:
 comment:
 #true
 (flatten1) "object" nil
-
+ 
 (flatten1) "object" "collect"
 comment:
 (002) "null?" "object"
@@ -497,7 +492,7 @@ comment:
 comment:
 #true
 (flatten1) (002) "car" "object" (003) "append" (flatten1) (002) "cdr" "object" "collect"
-
+ 
 (flexefy) "part"
 comment:
 (002) "symbol?" "part"
@@ -612,7 +607,7 @@ comment:
 comment:
 #true
 "program"
-
+ 
 (map-with) "function" "list" "extra"
 comment:
 #true
@@ -632,7 +627,7 @@ comment:
 comment:
 #true
 (merge1) "comparator" "list1" "list2" nil
-
+ 
 (merge1) "comparator" "list1" "list2" "collect"
 comment:
 (002) "null?" "list2"
@@ -677,7 +672,7 @@ comment:
 comment:
 #true
 (flexefy) "part"
-
+ 
 (newline-space) "program"
 comment:
 #true
@@ -702,7 +697,7 @@ comment:
 comment:
 #true
 (newline-space1a) "transformed"
-
+ 
 (newline-space-tab-repeats) "program"
 comment:
 #true
@@ -802,7 +797,7 @@ comment:
 comment:
 #true
 (pr1) "value" (001) "open-output-string"
-
+ 
 (pr1) "value" "output-string"
 comment:
 #true
@@ -867,7 +862,7 @@ nil
 comment:
 #true
 (003) "cons" "character" (read-all!)
-
+ 
 (read-sentence) "sentence"
 comment:
 #true
@@ -919,7 +914,7 @@ comment:
 comment:
 #true
 (read-sentences1) "sentences" nil
-
+ 
 (read-sentences1) "sentences" "collect"
 comment:
 #true
@@ -1219,4 +1214,5 @@ comment:
 comment:
 #true
 (002) "string->symbol" (002) "list->string" (003) "append" (004) "list" #Z #E #D (flatten) (003) "map" symbol-character (002) "string->list" "string"
+ 
  
