@@ -1144,21 +1144,26 @@ comment:
 comment:
 #true
 (002) "string->symbol" "part"
- 
-(tab-replace) "program"
-comment:
-(002) "null?" "program"
-nil
- 
-(tab-replace) "program"
-comment:
-(003) "eqv?" #tab (002) "car" "program"
-(003) "cons" #space (tab-replace) (002) "cdr" "program"
- 
+
 (tab-replace) "program"
 comment:
 #true
-(003) "cons" (002) "car" "program" (tab-replace) (002) "cdr" "program"
+(002) "reverse" (tab-replace1) "program" nil
+ 
+(tab-replace1) "program" "collect"
+comment:
+(002) "null?" "program"
+"collect"
+ 
+(tab-replace1) "program" "collect"
+comment:
+(003) "eqv?" #tab (002) "car" "program"
+(tab-replace1) (002) "cdr" "program" (003) "cons" #space "collect"
+ 
+(tab-replace1) "program" "collect"
+comment:
+#true
+(tab-replace1) (002) "cdr" "program" (003) "cons" (002) "car" "program" "collect"
  
 (tails) "number" "list"
 comment:
@@ -1189,11 +1194,6 @@ comment:
 comment:
 #true
 (002) "string->symbol" (002) "list->string" "gather-verb"
- 
-(when-file-exists) "path"
-comment:
-#true
-(002) "delete-file" "path"
  
 (write-all!) "program"
 comment:
