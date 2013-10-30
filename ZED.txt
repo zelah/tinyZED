@@ -1203,7 +1203,7 @@ err
 (write-all!) "program"
 comment:
 #true
-(003) "begin" (002) "write-char" (002) "car" "program" (write-all!) (002) "cdr" "program"
+(write-all!) (003) "begin" (002) "write-char" (002) "car" "program" (002) "cdr" "program"
  
 (zed->scheme) "value"
 comment:
