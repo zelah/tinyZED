@@ -998,22 +998,22 @@ comment:
 (sentences) "program"
 comment:
 #true
-(sentences1) "program" nil
+(002) "reverse" (sentences1) "program" nil nil
  
-(sentences1) "program" "collect"
+(sentences1) "program" "collect1" "collect2"
 comment:
 (002) "null?" "program"
-nil
+"collect2"
  
-(sentences1) "program" "collect"
+(sentences1) "program" "collect1" "collect2"
 comment:
 (003) "eqv?" #newline (002) "car" "program"
-(003) "cons" (002) "reverse" "collect" (sentences1) (002) "cdr" "program" nil
+(sentences1) (002) "cdr" "program" nil (003) "cons" (002) "reverse" "collect1" "collect2"
  
-(sentences1) "program" "collect"
+(sentences1) "program" "collect1" "collect2"
 comment:
 #true
-(sentences1) (002) "cdr" "program" (003) "cons" (002) "car" "program" "collect"
+(sentences1) (002) "cdr" "program" (003) "cons" (002) "car" "program" "collect1" "collect2"
  
 (slashefy) "character"
 comment:
