@@ -1065,12 +1065,12 @@ comment:
 (zed->scheme) "value"
 comment:
 #true
-(002) "reverse" (zed->scheme1) "value" nil
+(zed->scheme1) "value" nil
 
 (zed->scheme1) "value" "collect"
 comment:
 (002) "null?" "value"
-"collect"
+(002) "reverse" "collect"
 
 (zed->scheme1) "value" "collect"
 comment:
