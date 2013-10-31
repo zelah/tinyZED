@@ -1075,7 +1075,7 @@ comment:
 (zed->scheme1) "value" "collect"
 comment:
 #true
-(zed->scheme1) (!) "value" (003) "cons" (zed->scheme1) (1) "value" "collect"
+(zed->scheme1) (!) "value" (003) "cons" (zed->scheme) (1) "value" "collect"
  
 (zedefy) "string"
 comment:
