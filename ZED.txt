@@ -643,27 +643,32 @@ comment:
 (pr1) "value" "output-string"
 comment:
 #true
-(003) "begin" (003) "display" (pr1a) "value" "output-string" (002) "get-output-string" "output-string"
+(003) "begin" (003) "display" (pr1a) "value" nil "output-string" (002) "get-output-string" "output-string"
  
-(pr1a) "value"
+(pr1a) "value" "collect"
 comment:
 (002) "char?" "value"
 (002) "list->string" (003) "list" ## "value"
  
-(pr1a) "value"
+(pr1a) "value" "collect"
 comment:
 (002) "string?" "value"
 (004) "string-append" ""\""" "value" ""\"""
+
+(pr1a) "value" "collect"
+comment:
+(002) "null?" "value"
+(002) "reverse" "collect"
  
-(pr1a) "value"
+(pr1a) "value" "collect"
 comment:
 (002) "not" (002) "pair?" "value"
 "value"
  
-(pr1a) "value"
+(pr1a) "value" "collect"
 comment:
 #true
-(003) "cons" (pr1a) (1) "value" (pr1a) (!) "value"
+(pr1a) (!) "value" (003) "cons" (pr1a) (1) "value" "collect"
  
 (primitives)
 comment:
