@@ -1056,7 +1056,7 @@ err
 comment:
 #true
 (write-all!) (003) "begin" (002) "write-char" (002) "car" "program" (002) "cdr" "program"
- 
+
 (zed->scheme) "value"
 comment:
 (002) "not" (002) "pair?" "value"
@@ -1065,7 +1065,17 @@ comment:
 (zed->scheme) "value"
 comment:
 #true
-(003) "cons" (zed->scheme) (1) "value" (zed->scheme) (!) "value"
+(002) "reverse" (zed->scheme1) "value" nil
+
+(zed->scheme1) "value" "collect"
+comment:
+(002) "null?" "value"
+"collect"
+
+(zed->scheme1) "value" "collect"
+comment:
+#true
+(zed->scheme1) (!) "value" (003) "cons" (zed->scheme1) (1) "value" "collect"
  
 (zedefy) "string"
 comment:
