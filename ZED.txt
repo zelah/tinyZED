@@ -1,5 +1,15 @@
 ;;; ZED.scm
  
+(-2) "list"
+comment:
+#true
+(!) (!) "list"
+
+(2) "list"
+comment:
+#true
+(1) (!) "list"
+
 (force1) "value"
 comment:
 (002) "promise?" "value"
@@ -837,16 +847,21 @@ comment:
 comment:
 #true
 (003) "cons" "object" "stack"
- 
-(rd) "final" "function" "list"
-comment:
-(002) "null?" "list"
-"final"
- 
+
 (rd) "final" "function" "list"
 comment:
 #true
-(003) "function" (1) "list" (rd) "final" "function" (!) "list"
+(rd1) "function" (003) "cons" "final" (002) "reverse" "list"
+ 
+(rd1) "function" "list"
+comment:
+(002) "null?" (!) "list"
+(1) "list"
+ 
+(rd1) "function" "list"
+comment:
+#true
+(rd1) "function" (003) "cons" (003) "function" (2) "list" (1) "list" (-2) "list"
  
 (read-all!)
 comment:
