@@ -323,7 +323,7 @@ comment:
 (first1) "integer" "list" "collect"
 comment:
 (003) ">" "integer" 0
-(first1) (003) "-" "integer" 1 (!) "list" (c) (1) "list"  "collect"
+(first1) (003) "-" "integer" 1 (!) "list" (003) "cons" (1) "list"  "collect"
  
 (flatten) "object"
 comment:
