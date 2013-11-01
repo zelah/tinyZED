@@ -4,18 +4,18 @@
 comment:
 #true
 (!) (!) "list"
-
+ 
 (2) "list"
 comment:
 #true
 (1) (!) "list"
-
-(force1) "value"
+ 
+(force!) "value"
 comment:
 (002) "promise?" "value"
 (002) "force" "value"
  
-(force1) "value"
+(force!) "value"
 comment:
 #true
 "value"
@@ -23,12 +23,12 @@ comment:
 (!) "pair"
 comment:
 #true
-(force1) (002) "cdr" "pair"
+(force!) (002) "cdr" "pair"
  
 (1) "pair"
 comment:
 #true
-(force1) (002) "car" "pair"
+(force!) (002) "car" "pair"
  
 (=) "value1" "value2"
 comment:
@@ -38,32 +38,32 @@ comment:
 (add-between-ra) "list" "item"
 comment:
 #true
-(002) "reverse" (add-between1) "item" "list" nil
+(002) "reverse" (add-between!) "item" "list" nil
  
 (add-between) "item" "list"
 comment:
 #true
-(002) "reverse" (add-between1) "item" "list" nil
+(002) "reverse" (add-between!) "item" "list" nil
  
-(add-between1) "item" "list" "collect"
+(add-between!) "item" "list" "collect"
 comment:
 (002) "null?" "list"
 "collect"
  
-(add-between1) "item" "list" "collect"
+(add-between!) "item" "list" "collect"
 comment:
 (002) "null?" (002) "cdr" "list"
 (003) "cons" (002) "car" "list" "collect"
  
-(add-between1) "item" "list" "collect"
+(add-between!) "item" "list" "collect"
 comment:
 #true
-(add-between1) "item" (002) "cdr" "list" (003) "cons" "item" (003) "cons" (002) "car" "list" "collect"
+(add-between!) "item" (002) "cdr" "list" (003) "cons" "item" (003) "cons" (002) "car" "list" "collect"
  
 (alpha)
 comment:
 #true
-(write-all!) (flatten) (newlines) (by-four) (function-sort) (sentences) (leading-newline) (space-newline) (tab-replace) (newline-space-tab-repeats) (newline-space) (filter) not-return? (read-all!)
+(write-all) (flatten) (newlines) (by-four) (function-sort) (sentences) (leading-newline) (space-newline) (tab-replace) (newline-space-tab-repeats) (newline-space) (filter) not-return? (read-all)
  
 (application?) "expression"
 comment:
@@ -78,9 +78,9 @@ comment:
 (arity-hash) "program"
 comment:
 #true
-(003) "append" (003) "map" arity-hash1 "program" (003) "append" (007) "list" (003) "cons" "'ZED001" 1 (003) "cons" "'ZEDor" 2 (003) "cons" "'ZEDand" 2 (003) "cons" "'ZEDse" 2 (003) "cons" "'ZEDc" 2 (003) "cons" "'ZEDquote" 1 (099) "list" (003) "cons" "'ZED002" 2 (003) "cons" "'ZED003" 3 (003) "cons" "'ZED004" 4 (003) "cons" "'ZED005" 5 (003) "cons" "'ZED006" 6 (003) "cons" "'ZED007" 7 (003) "cons" "'ZED008" 8 (003) "cons" "'ZED009" 9 (003) "cons" "'ZED010" 10 (003) "cons" "'ZED011" 11 (003) "cons" "'ZED012" 12 (003) "cons" "'ZED013" 13 (003) "cons" "'ZED014" 14 (003) "cons" "'ZED015" 15 (003) "cons" "'ZED016" 16 (003) "cons" "'ZED017" 17 (003) "cons" "'ZED018" 18 (003) "cons" "'ZED019" 19 (003) "cons" "'ZED020" 20 (003) "cons" "'ZED021" 21 (003) "cons" "'ZED022" 22 (003) "cons" "'ZED023" 23 (003) "cons" "'ZED024" 24 (003) "cons" "'ZED025" 25 (003) "cons" "'ZED026" 26 (003) "cons" "'ZED027" 27 (003) "cons" "'ZED028" 28 (003) "cons" "'ZED029" 29 (003) "cons" "'ZED030" 30 (003) "cons" "'ZED031" 31 (003) "cons" "'ZED032" 32 (003) "cons" "'ZED033" 33 (003) "cons" "'ZED034" 34 (003) "cons" "'ZED035" 35 (003) "cons" "'ZED036" 36 (003) "cons" "'ZED037" 37 (003) "cons" "'ZED038" 38 (003) "cons" "'ZED039" 39 (003) "cons" "'ZED040" 40 (003) "cons" "'ZED041" 41 (003) "cons" "'ZED042" 42 (003) "cons" "'ZED043" 43 (003) "cons" "'ZED044" 44 (003) "cons" "'ZED045" 45 (003) "cons" "'ZED046" 46 (003) "cons" "'ZED047" 47 (003) "cons" "'ZED048" 48 (003) "cons" "'ZED049" 49 (003) "cons" "'ZED050" 50 (003) "cons" "'ZED051" 51 (003) "cons" "'ZED052" 52 (003) "cons" "'ZED053" 53 (003) "cons" "'ZED054" 54 (003) "cons" "'ZED055" 55 (003) "cons" "'ZED056" 56 (003) "cons" "'ZED057" 57 (003) "cons" "'ZED058" 58 (003) "cons" "'ZED059" 59 (003) "cons" "'ZED060" 60 (003) "cons" "'ZED061" 61 (003) "cons" "'ZED062" 62 (003) "cons" "'ZED063" 63 (003) "cons" "'ZED064" 64 (003) "cons" "'ZED065" 65 (003) "cons" "'ZED066" 66 (003) "cons" "'ZED067" 67 (003) "cons" "'ZED068" 68 (003) "cons" "'ZED069" 69 (003) "cons" "'ZED070" 70 (003) "cons" "'ZED071" 71 (003) "cons" "'ZED072" 72 (003) "cons" "'ZED073" 73 (003) "cons" "'ZED074" 74 (003) "cons" "'ZED075" 75 (003) "cons" "'ZED076" 76 (003) "cons" "'ZED077" 77 (003) "cons" "'ZED078" 78 (003) "cons" "'ZED079" 79 (003) "cons" "'ZED080" 80 (003) "cons" "'ZED081" 81 (003) "cons" "'ZED082" 82 (003) "cons" "'ZED083" 83 (003) "cons" "'ZED084" 84 (003) "cons" "'ZED085" 85 (003) "cons" "'ZED086" 86 (003) "cons" "'ZED087" 87 (003) "cons" "'ZED088" 88 (003) "cons" "'ZED089" 89 (003) "cons" "'ZED090" 90 (003) "cons" "'ZED091" 91 (003) "cons" "'ZED092" 92 (003) "cons" "'ZED093" 93 (003) "cons" "'ZED094" 94 (003) "cons" "'ZED095" 95 (003) "cons" "'ZED096" 96 (003) "cons" "'ZED097" 97 (003) "cons" "'ZED098" 98 (003) "cons" "'ZED099" 99
+(003) "append" (003) "map" arity-hash! "program" (003) "append" (007) "list" (003) "cons" "'ZED001" 1 (003) "cons" "'ZEDor" 2 (003) "cons" "'ZEDand" 2 (003) "cons" "'ZEDse" 2 (003) "cons" "'ZEDc" 2 (003) "cons" "'ZEDquote" 1 (099) "list" (003) "cons" "'ZED002" 2 (003) "cons" "'ZED003" 3 (003) "cons" "'ZED004" 4 (003) "cons" "'ZED005" 5 (003) "cons" "'ZED006" 6 (003) "cons" "'ZED007" 7 (003) "cons" "'ZED008" 8 (003) "cons" "'ZED009" 9 (003) "cons" "'ZED010" 10 (003) "cons" "'ZED011" 11 (003) "cons" "'ZED012" 12 (003) "cons" "'ZED013" 13 (003) "cons" "'ZED014" 14 (003) "cons" "'ZED015" 15 (003) "cons" "'ZED016" 16 (003) "cons" "'ZED017" 17 (003) "cons" "'ZED018" 18 (003) "cons" "'ZED019" 19 (003) "cons" "'ZED020" 20 (003) "cons" "'ZED021" 21 (003) "cons" "'ZED022" 22 (003) "cons" "'ZED023" 23 (003) "cons" "'ZED024" 24 (003) "cons" "'ZED025" 25 (003) "cons" "'ZED026" 26 (003) "cons" "'ZED027" 27 (003) "cons" "'ZED028" 28 (003) "cons" "'ZED029" 29 (003) "cons" "'ZED030" 30 (003) "cons" "'ZED031" 31 (003) "cons" "'ZED032" 32 (003) "cons" "'ZED033" 33 (003) "cons" "'ZED034" 34 (003) "cons" "'ZED035" 35 (003) "cons" "'ZED036" 36 (003) "cons" "'ZED037" 37 (003) "cons" "'ZED038" 38 (003) "cons" "'ZED039" 39 (003) "cons" "'ZED040" 40 (003) "cons" "'ZED041" 41 (003) "cons" "'ZED042" 42 (003) "cons" "'ZED043" 43 (003) "cons" "'ZED044" 44 (003) "cons" "'ZED045" 45 (003) "cons" "'ZED046" 46 (003) "cons" "'ZED047" 47 (003) "cons" "'ZED048" 48 (003) "cons" "'ZED049" 49 (003) "cons" "'ZED050" 50 (003) "cons" "'ZED051" 51 (003) "cons" "'ZED052" 52 (003) "cons" "'ZED053" 53 (003) "cons" "'ZED054" 54 (003) "cons" "'ZED055" 55 (003) "cons" "'ZED056" 56 (003) "cons" "'ZED057" 57 (003) "cons" "'ZED058" 58 (003) "cons" "'ZED059" 59 (003) "cons" "'ZED060" 60 (003) "cons" "'ZED061" 61 (003) "cons" "'ZED062" 62 (003) "cons" "'ZED063" 63 (003) "cons" "'ZED064" 64 (003) "cons" "'ZED065" 65 (003) "cons" "'ZED066" 66 (003) "cons" "'ZED067" 67 (003) "cons" "'ZED068" 68 (003) "cons" "'ZED069" 69 (003) "cons" "'ZED070" 70 (003) "cons" "'ZED071" 71 (003) "cons" "'ZED072" 72 (003) "cons" "'ZED073" 73 (003) "cons" "'ZED074" 74 (003) "cons" "'ZED075" 75 (003) "cons" "'ZED076" 76 (003) "cons" "'ZED077" 77 (003) "cons" "'ZED078" 78 (003) "cons" "'ZED079" 79 (003) "cons" "'ZED080" 80 (003) "cons" "'ZED081" 81 (003) "cons" "'ZED082" 82 (003) "cons" "'ZED083" 83 (003) "cons" "'ZED084" 84 (003) "cons" "'ZED085" 85 (003) "cons" "'ZED086" 86 (003) "cons" "'ZED087" 87 (003) "cons" "'ZED088" 88 (003) "cons" "'ZED089" 89 (003) "cons" "'ZED090" 90 (003) "cons" "'ZED091" 91 (003) "cons" "'ZED092" 92 (003) "cons" "'ZED093" 93 (003) "cons" "'ZED094" 94 (003) "cons" "'ZED095" 95 (003) "cons" "'ZED096" 96 (003) "cons" "'ZED097" 97 (003) "cons" "'ZED098" 98 (003) "cons" "'ZED099" 99
  
-(arity-hash1) "clause"
+(arity-hash!) "clause"
 comment:
 #true
 (003) "cons" (clause-name) "clause" (clause-arity) "clause"
@@ -88,32 +88,32 @@ comment:
 (by-four) "sentences"
 comment:
 #true
-(002) "reverse" (by-four1) "sentences" nil
+(002) "reverse" (by-four!) "sentences" nil
  
-(by-four1) "sentences" "collect"
+(by-four!) "sentences" "collect"
 comment:
 (002) "null?" "sentences"
 "collect"
  
-(by-four1) "sentences" "collect"
+(by-four!) "sentences" "collect"
 comment:
 #true
-(by-four1) (002) "cddddr" "sentences" (003) "cons" (005) "list" (002) "car" "sentences" (002) "cadr" "sentences" (002) "caddr" "sentences" (002) "cadddr" "sentences" "collect"
+(by-four!) (002) "cddddr" "sentences" (003) "cons" (005) "list" (002) "car" "sentences" (002) "cadr" "sentences" (002) "caddr" "sentences" (002) "cadddr" "sentences" "collect"
  
 (by-three) "sentences"
 comment:
 #true
-(002) "reverse" (by-three1) "sentences" nil
+(002) "reverse" (by-three!) "sentences" nil
  
-(by-three1) "sentences" "collect"
+(by-three!) "sentences" "collect"
 comment:
 (002) "null?" "sentences"
 "collect"
  
-(by-three1) "sentences" "collect"
+(by-three!) "sentences" "collect"
 comment:
 #true
-(by-three1) (002) "cdddr" "sentences" (003) "cons" (004) "list" (002) "car" "sentences" (002) "cadr" "sentences" (002) "caddr" "sentences" "collect"
+(by-three!) (002) "cdddr" "sentences" (003) "cons" (004) "list" (002) "car" "sentences" (002) "cadr" "sentences" (002) "caddr" "sentences" "collect"
  
 (character-less?) "character1" "character2"
 comment:
@@ -158,27 +158,27 @@ comment:
 (combine-all) "program"
 comment:
 #true
-(002) "reverse" (combine-all1) "program" nil
+(002) "reverse" (combine-all!) "program" nil
  
-(combine-all1) "program" "collect"
+(combine-all!) "program" "collect"
 comment:
 (002) "null?" "program"
 "collect"
  
-(combine-all1) "program" "collect"
+(combine-all!) "program" "collect"
 comment:
 (002) "null?" (002) "cdr" "program"
 (003) "cons" (002) "car" "program" "collect"
  
-(combine-all1) "program" "collect"
+(combine-all!) "program" "collect"
 comment:
 (003) "eq?" (clause-name) (002) "car" "program" (clause-name) (002) "cadr" "program"
-(combine-all1) (combine-head-clauses) "program" "collect"
+(combine-all!) (combine-head-clauses) "program" "collect"
  
-(combine-all1) "program" "collect"
+(combine-all!) "program" "collect"
 comment:
 #true
-(combine-all1) (002) "cdr" "program" (003) "cons" (002) "car" "program" "collect"
+(combine-all!) (002) "cdr" "program" (003) "cons" (002) "car" "program" "collect"
  
 (combine-clauses) "clause1" "clause2"
 comment:
@@ -198,19 +198,19 @@ comment:
 (comp)
 comment:
 #true
-(comp1)
-
-(comp1)
+(comp!)
+ 
+(comp!)
 comment:
 #true
-(comp1a) (combine-program-clauses) (by-three) (read-sentences) (discard-comments) (function-sort) (sentences) (leading-newline) (space-newline) (tab-replace) (newline-space-tab-repeats) (newline-space) (filter) not-return? (read-all!)
+(comp!a) (combine-program-clauses) (by-three) (read-sentences) (discard-comments) (function-sort) (sentences) (leading-newline) (space-newline) (tab-replace) (newline-space-tab-repeats) (newline-space) (filter) not-return? (read-all)
  
-(comp1a) "combined"
+(comp!a) "combined"
 comment:
 #true
-(comp1aa) (programize) "combined" (arity-hash) "combined"
+(comp!aa) (programize) "combined" (arity-hash) "combined"
  
-(comp1aa) "programized"
+(comp!aa) "programized"
 comment:
 #true
 (004) "begin" (002) "display" (primitives) (001) "newline" (002) "display" "programized"
@@ -218,17 +218,17 @@ comment:
 (condefy) "expressions"
 comment:
 #true
-(002) "reverse" (condefy1) "expressions" nil
+(002) "reverse" (condefy!) "expressions" nil
  
-(condefy1) "expressions" "collect"
+(condefy!) "expressions" "collect"
 comment:
 (002) "null?" "expressions"
 "collect"
  
-(condefy1) "expressions" "collect"
+(condefy!) "expressions" "collect"
 comment:
 #true
-(condefy1) (002) "cddr" "expressions" (003) "cons" (003) "append" (002) "car" "expressions" (002) "cadr" "expressions" "collect"
+(condefy!) (002) "cddr" "expressions" (003) "cons" (003) "append" (002) "car" "expressions" (002) "cadr" "expressions" "collect"
  
 (digit?) "character"
 comment:
@@ -238,29 +238,29 @@ comment:
 (discard-comments) "program"
 comment:
 #true
-(002) "reverse" (discard-comments1) "program" nil
+(002) "reverse" (discard-comments!) "program" nil
  
-(discard-comments1) "program" "collect"
+(discard-comments!) "program" "collect"
 comment:
 (002) "null?" "program"
 "collect"
  
-(discard-comments1) "program" "collect"
+(discard-comments!) "program" "collect"
 comment:
 #true
-(discard-comments1) (002) "cddddr" "program" (003) "cons" (002) "cadddr" "program" (003) "cons" (002) "caddr" "program" (003) "cons" (002) "car" "program" "collect"
+(discard-comments!) (002) "cddddr" "program" (003) "cons" (002) "cadddr" "program" (003) "cons" (002) "caddr" "program" (003) "cons" (002) "car" "program" "collect"
  
 (dr) "value"
 comment:
 #true
-(005) "begin" (002) "display" (pr) (dr1) "value" (001) "newline" (001) "newline" "value"
+(005) "begin" (002) "display" (pr) (dr!) "value" (001) "newline" (001) "newline" "value"
  
-(dr1) "value"
+(dr!) "value"
 comment:
 (002) "pair?" "value"
-(mp) dr1 (first) 64 "value"
+(mp) dr! (first) 64 "value"
  
-(dr1) "value"
+(dr!) "value"
 comment:
 #true
 "value"
@@ -288,67 +288,67 @@ comment:
 (filter) "predicate" "list"
 comment:
 #true
-(002) "reverse" (filter1) "predicate" "list" nil
+(002) "reverse" (filter!) "predicate" "list" nil
  
-(filter1) "predicate" "list" "collect"
+(filter!) "predicate" "list" "collect"
 comment:
 (002) "null?" "list"
 "collect"
  
-(filter1) "predicate" "list" "collect"
+(filter!) "predicate" "list" "collect"
 comment:
 (002) "predicate" (002) "car" "list"
-(filter1) "predicate" (002) "cdr" "list" (003) "cons" (002) "car" "list" "collect"
+(filter!) "predicate" (002) "cdr" "list" (003) "cons" (002) "car" "list" "collect"
  
-(filter1) "predicate" "list" "collect"
+(filter!) "predicate" "list" "collect"
 comment:
 #true
-(filter1) "predicate" (002) "cdr" "list" "collect"
+(filter!) "predicate" (002) "cdr" "list" "collect"
  
 (first) "integer" "list"
 comment:
 (002) "not" (002) "pair?" "list"
 "list"
-
+ 
 (first) "integer" "list"
 comment:
 #true
-(first1) "integer" "list" nil
+(first!) "integer" "list" nil
  
-(first1) "integer" "list" "collect"
+(first!) "integer" "list" "collect"
 comment:
 (002) "zero?" "integer"
 (002) "reverse" "collect"
  
-(first1) "integer" "list" "collect"
+(first!) "integer" "list" "collect"
 comment:
 (003) ">" "integer" 0
-(first1) (003) "-" "integer" 1 (!) "list" (003) "cons" (1) "list"  "collect"
+(first!) (003) "-" "integer" 1 (!) "list" (003) "cons" (1) "list"  "collect"
  
 (flatten) "object"
 comment:
 #true
-(flatten1) "object" nil
+(flatten!) "object" nil
  
-(flatten1) "object" "collect"
+(flatten!) "object" "collect"
 comment:
 (002) "null?" "object"
 "collect"
  
-(flatten1) "object" "collect"
+(flatten!) "object" "collect"
 comment:
 (002) "not" (002) "pair?" "object"
 (003) "cons" "object" "collect"
  
-(flatten1) "object" "collect"
+(flatten!) "object" "collect"
 comment:
 #true
-(flatten1) (002) "car" "object" (003) "append" (flatten1) (002) "cdr" "object" "collect"
+(flatten!) (002) "car" "object" (003) "append" (flatten!) (002) "cdr" "object" "collect"
  
 (flexefy) "part"
 comment:
 (002) "symbol?" "part"
-(flexefy1) (002) "string->list" (002) "symbol->string" "part"
+(flexefy!) (002) "string->list" (002) "symbol->string" "part"
  
 (flexefy) "part"
 comment:
@@ -365,22 +365,22 @@ comment:
 #true
 (002) "string->number" (003) "string-append" ""#e"" (002) "number->string" "part"
  
-(flexefy1) "part"
+(flexefy!) "part"
 comment:
 (003) "equal?" "part" (006) "list" ## #t #r #u #e
 #true
  
-(flexefy1) "part"
+(flexefy!) "part"
 comment:
 (003) "equal?" "part" (007) "list" ## #f #a #l #s #e
 #false
  
-(flexefy1) "part"
+(flexefy!) "part"
 comment:
 (003) "eqv?" ## (002) "car" "part"
 (002) "string->symbol" (002) "list->string" (003) "append" (003) "list" ## #\ (002) "cdr" "part"
  
-(flexefy1) "part"
+(flexefy!) "part"
 comment:
 #true
 (zedefy) (002) "list->string" "part"
@@ -403,9 +403,9 @@ comment:
 (gather-count?) "symbol"
 comment:
 #true
-(gather-count?1) (002) "string->list" (002) "symbol->string" "symbol"
+(gather-count?!) (002) "string->list" (002) "symbol->string" "symbol"
  
-(gather-count?1) "candidate"
+(gather-count?!) "candidate"
 comment:
 #true
 (008) "and" (003) "=" 6 (002) "length" "candidate" (003) "eqv?" #Z (002) "car" "candidate" (003) "eqv?" #E (002) "cadr" "candidate" (003) "eqv?" #D (002) "caddr" "candidate" (003) "eqv?" #0 (002) "cadddr" "candidate" (digit?) (002) "car" (002) "cddddr" "candidate" (digit?) (002) "cadr" (002) "cddddr" "candidate"
@@ -463,42 +463,42 @@ comment:
 (map-with) "function" "list" "extra"
 comment:
 #true
-(002) "reverse" (map-with1) "function" "list" "extra" nil
+(002) "reverse" (map-with!) "function" "list" "extra" nil
  
-(map-with1) "function" "list" "extra" "collect"
+(map-with!) "function" "list" "extra" "collect"
 comment:
 (002) "null?" "list"
 "collect"
  
-(map-with1) "function" "list" "extra" "collect"
+(map-with!) "function" "list" "extra" "collect"
 comment:
 #true
-(map-with1) "function" (002) "cdr" "list" "extra" (003) "cons" (003) "function" (002) "car" "list" "extra" "collect"
+(map-with!) "function" (002) "cdr" "list" "extra" (003) "cons" (003) "function" (002) "car" "list" "extra" "collect"
  
 (merge) "comparator" "list1" "list2"
 comment:
 #true
-(merge1) "comparator" "list1" "list2" nil
+(merge!) "comparator" "list1" "list2" nil
  
-(merge1) "comparator" "list1" "list2" "collect"
+(merge!) "comparator" "list1" "list2" "collect"
 comment:
 (002) "null?" "list2"
 (003) "append" (002) "reverse" "collect" "list1"
  
-(merge1) "comparator" "list1" "list2" "collect"
+(merge!) "comparator" "list1" "list2" "collect"
 comment:
 (002) "null?" "list1"
 (003) "append" (002) "reverse" "collect" "list2"
  
-(merge1) "comparator" "list1" "list2" "collect"
+(merge!) "comparator" "list1" "list2" "collect"
 comment:
 (003) "comparator" (002) "car" "list2" (002) "car" "list1"
-(merge1) "comparator" "list1" (002) "cdr" "list2" (003) "cons" (002) "car" "list2" "collect"
+(merge!) "comparator" "list1" (002) "cdr" "list2" (003) "cons" (002) "car" "list2" "collect"
  
-(merge1) "comparator" "list1" "list2" "collect"
+(merge!) "comparator" "list1" "list2" "collect"
 comment:
 #true
-(merge1) "comparator" (002) "cdr" "list1" "list2" (003) "cons" (002) "car" "list1" "collect"
+(merge!) "comparator" (002) "cdr" "list1" "list2" (003) "cons" (002) "car" "list1" "collect"
  
 (mp) "function" "list"
 comment:
@@ -528,72 +528,72 @@ comment:
 (newline-space) "program"
 comment:
 #true
-(newline-space1) "program"
+(newline-space!) "program"
  
-(newline-space1) "program"
+(newline-space!) "program"
 comment:
 #true
-(003) "cons" #newline (newline-space1a) "program"
+(003) "cons" #newline (newline-space!a) "program"
  
-(newline-space1a) "program"
+(newline-space!a) "program"
 comment:
 #true
-(newline-space1aa) "program" (002) "reverse" (newline-space1ab) "program" nil
+(newline-space!aa) "program" (002) "reverse" (newline-space!ab) "program" nil
  
-(newline-space1aa) "program" "transformed"
+(newline-space!aa) "program" "transformed"
 comment:
 (003) "equal?" "program" "transformed"
 "program"
  
-(newline-space1aa) "program" "transformed"
+(newline-space!aa) "program" "transformed"
 comment:
 #true
-(newline-space1a) "transformed"
+(newline-space!a) "transformed"
  
 (newline-space-tab-repeats) "program"
 comment:
 #true
-(002) "reverse" (newline-space-tab-repeats1) "program" nil
+(002) "reverse" (newline-space-tab-repeats!) "program" nil
  
-(newline-space-tab-repeats1) "program" "collect"
+(newline-space-tab-repeats!) "program" "collect"
 comment:
 (003) "or" (002) "null?" "program" (002) "null?" (002) "cdr" "program"
 (003) "append" "program" "collect"
  
-(newline-space-tab-repeats1) "program" "collect"
+(newline-space-tab-repeats!) "program" "collect"
 comment:
 (003) "and" (003) "eqv?" #newline (002) "car" "program" (003) "eqv?" #newline (002) "cadr" "program"
-(newline-space-tab-repeats1) (002) "cdr" "program" "collect"
+(newline-space-tab-repeats!) (002) "cdr" "program" "collect"
  
-(newline-space-tab-repeats1) "program" "collect"
+(newline-space-tab-repeats!) "program" "collect"
 comment:
 (003) "and" (003) "or" (003) "eqv?" #space (002) "car" "program" (003) "eqv?" #tab (002) "car" "program" (003) "or" (003) "eqv?" #space (002) "cadr" "program" (003) "eqv?" #tab (002) "cadr" "program"
-(newline-space-tab-repeats1) (002) "cdr" "program" "collect"
+(newline-space-tab-repeats!) (002) "cdr" "program" "collect"
  
-(newline-space-tab-repeats1) "program" "collect"
+(newline-space-tab-repeats!) "program" "collect"
 comment:
 #true
-(newline-space-tab-repeats1) (002) "cdr" "program" (003) "cons" (002) "car" "program" "collect"
+(newline-space-tab-repeats!) (002) "cdr" "program" (003) "cons" (002) "car" "program" "collect"
  
-(newline-space1ab) "program" "collect"
+(newline-space!ab) "program" "collect"
 comment:
 (002) "null?" "program"
 "collect"
  
-(newline-space1ab) "program" "collect"
+(newline-space!ab) "program" "collect"
 comment:
 (002) "null?" (002) "cdr" "program"
 (003) "cons" (002) "car" "program" "collect"
  
-(newline-space1ab) "program" "collect"
+(newline-space!ab) "program" "collect"
 comment:
 (003) "and" (003) "eqv?" #newline (002) "car" "program" (003) "or" (003) "eqv?" #space (002) "cadr" "program" (003) "eqv?" #tab (002) "cadr" "program"
-(newline-space1ab) (002) "cdr" "program" "collect"
+(newline-space!ab) (002) "cdr" "program" "collect"
  
-(newline-space1ab) "program" "collect"
+(newline-space!ab) "program" "collect"
 comment:
 #true
-(newline-space1ab) (002) "cdr" "program" (003) "cons" (002) "car" "program" "collect"
+(newline-space!ab) (002) "cdr" "program" (003) "cons" (002) "car" "program" "collect"
  
 (newlines) "clauses"
 comment:
@@ -608,34 +608,34 @@ comment:
 (noun) "gather-noun"
 comment:
 #true
-(noun1) (002) "list->string" "gather-noun"
+(noun!) (002) "list->string" "gather-noun"
  
 (noun-number) "string" "number"
 comment:
 #true
-(noun-number1) "string" (002) "string->list" "string" "number"
+(noun-number!) "string" (002) "string->list" "string" "number"
  
-(noun-number1) "string" "list" "number"
+(noun-number!) "string" "list" "number"
 comment:
 "number"
 "number"
  
-(noun-number1) "string" "list" "number"
+(noun-number!) "string" "list" "number"
 comment:
 #true
-(noun-number1a) "string" "list" (002) "reverse" "list"
+(noun-number!a) "string" "list" (002) "reverse" "list"
  
-(noun-number1a) "string" "list" "reversed"
+(noun-number!a) "string" "list" "reversed"
 comment:
 (003) "and" (003) "eqv?" #" (002) "car" "list" (003) "eqv?" #" (002) "car" "reversed"
 (002) "list->string" (002) "cdr" (002) "reverse" (002) "cdr" "reversed"
  
-(noun-number1a) "string" "list" "reversed"
+(noun-number!a) "string" "list" "reversed"
 comment:
 #true
 (002) "string->symbol" "string"
  
-(noun1) "string"
+(noun!) "string"
 comment:
 #true
 (noun-number) "string" (002) "string->number" "string"
@@ -648,37 +648,37 @@ comment:
 (pr) "value"
 comment:
 #true
-(pr1) "value" (001) "open-output-string"
+(pr!) "value" (001) "open-output-string"
  
-(pr1) "value" "output-string"
+(pr!) "value" "output-string"
 comment:
 #true
-(003) "begin" (003) "display" (pr1a) "value" nil "output-string" (002) "get-output-string" "output-string"
+(003) "begin" (003) "display" (pr!a) "value" nil "output-string" (002) "get-output-string" "output-string"
  
-(pr1a) "value" "collect"
+(pr!a) "value" "collect"
 comment:
 (002) "char?" "value"
 (002) "list->string" (003) "list" ## "value"
  
-(pr1a) "value" "collect"
+(pr!a) "value" "collect"
 comment:
 (002) "string?" "value"
 (004) "string-append" ""\""" "value" ""\"""
-
-(pr1a) "value" "collect"
+ 
+(pr!a) "value" "collect"
 comment:
 (002) "null?" "value"
 (002) "reverse" "collect"
  
-(pr1a) "value" "collect"
+(pr!a) "value" "collect"
 comment:
 (002) "not" (002) "pair?" "value"
 "value"
  
-(pr1a) "value" "collect"
+(pr!a) "value" "collect"
 comment:
 #true
-(pr1a) (!) "value" (003) "cons" (pr1a) (1) "value" "collect"
+(pr!a) (!) "value" (003) "cons" (pr!a) (1) "value" "collect"
  
 (primitives)
 comment:
@@ -694,71 +694,71 @@ comment:
 comment:
 #true
 (003) "cons" "object" "stack"
-
+ 
 (rd) "final" "function" "list"
 comment:
 #true
-(rd1) "function" (003) "cons" "final" (002) "reverse" "list"
+(rd!) "function" (003) "cons" "final" (002) "reverse" "list"
  
-(rd1) "function" "list"
+(rd!) "function" "list"
 comment:
 (002) "null?" (!) "list"
 (1) "list"
  
-(rd1) "function" "list"
+(rd!) "function" "list"
 comment:
 #true
-(rd1) "function" (003) "cons" (003) "function" (2) "list" (1) "list" (-2) "list"
+(rd!) "function" (003) "cons" (003) "function" (2) "list" (1) "list" (-2) "list"
  
-(read-all!)
+(read-all)
 comment:
 #true
-(002) "reverse" (read-all!1) nil
-
-(read-all!1) "collect"
-comment:
-#true
-(read-all!1a) (001) "read-char" "collect"
+(002) "reverse" (read-all!) nil
  
-(read-all!1a) "character" "collect"
+(read-all!) "collect"
+comment:
+#true
+(read-all!a) (001) "read-char" "collect"
+ 
+(read-all!a) "character" "collect"
 comment:
 (002) "eof-object?" "character"
 "collect"
  
-(read-all!1a) "character" "collect"
+(read-all!a) "character" "collect"
 comment:
 #true
-(read-all!1) (003) "cons" "character" "collect"
+(read-all!) (003) "cons" "character" "collect"
  
 (read-sentence) "sentence"
 comment:
 #true
-(002) "reverse" (read-sentence1) "sentence" nil
+(002) "reverse" (read-sentence!) "sentence" nil
  
-(read-sentence1) "sentence" "collect"
+(read-sentence!) "sentence" "collect"
 comment:
 (002) "null?" "sentence"
 "collect"
  
-(read-sentence1) "sentence" "collect"
+(read-sentence!) "sentence" "collect"
 comment:
 (003) "eqv?" #space (002) "car" "sentence"
-(read-sentence1) (002) "cdr" "sentence" "collect"
+(read-sentence!) (002) "cdr" "sentence" "collect"
  
-(read-sentence1) "sentence" "collect"
+(read-sentence!) "sentence" "collect"
 comment:
 (003) "eqv?" #( (002) "car" "sentence"
-(read-sentence1a) "sentence" (gather-verb) (002) "cdr" "sentence" "collect"
+(read-sentence!a) "sentence" (gather-verb) (002) "cdr" "sentence" "collect"
  
-(read-sentence1) "sentence" "collect"
+(read-sentence!) "sentence" "collect"
 comment:
 #true
-(read-sentence1b) "sentence" (gather-noun) "sentence" "collect"
+(read-sentence!b) "sentence" (gather-noun) "sentence" "collect"
  
-(read-sentence1a) "sentence" "gather-verb" "collect"
+(read-sentence!a) "sentence" "gather-verb" "collect"
 comment:
 #true 
-(read-sentence1) (tails) 
+(read-sentence!) (tails) 
                    (003) "+" 2 (002) "length" 
                                      "gather-verb" 
                    "sentence" 
@@ -768,10 +768,10 @@ comment:
                                (verb) "gather-verb" 
                        "collect"
  
-(read-sentence1b) "sentence" "gather-noun" "collect"
+(read-sentence!b) "sentence" "gather-noun" "collect"
 comment:
 #true
-(read-sentence1) (tails) (002) "length" "gather-noun" 
+(read-sentence!) (tails) (002) "length" "gather-noun" 
                          "sentence" 
                  (003) "cons" (namefy) 
                                 (noun) "gather-noun"  
@@ -780,12 +780,12 @@ comment:
 (read-sentences) "sentences"
 comment:
 #true
-(read-sentences1) "sentences" nil
+(read-sentences!) "sentences" nil
  
-(read-sentences1) "sentences" "collect"
+(read-sentences!) "sentences" "collect"
 comment:
 #true
-(003) "map" "reverse" (map-with) read-sentence1 "sentences" "collect"
+(003) "map" "reverse" (map-with) read-sentence! "sentences" "collect"
  
 (ready-clause) "clause"
 comment:
@@ -800,37 +800,37 @@ comment:
 (schemefy) "expression" "arity-hash"
 comment:
 #true
-(002) "list" (schemefy1) (002) "reverse" "expression" "arity-hash" (stack)
+(002) "list" (schemefy!) (002) "reverse" "expression" "arity-hash" (stack)
  
-(schemefy1) "expression" "arity-hash" "stack"
+(schemefy!) "expression" "arity-hash" "stack"
 comment:
 (002) "zero?" (002) "length" "expression"
 (top) "stack"
  
-(schemefy1) "expression" "arity-hash" "stack"
+(schemefy!) "expression" "arity-hash" "stack"
 comment:
 (002) "not" (application?) "expression"
-(schemefy1) (pop) "expression" "arity-hash" (push) (top) "expression" "stack"
+(schemefy!) (pop) "expression" "arity-hash" (push) (top) "expression" "stack"
  
-(schemefy1) "expression" "arity-hash" "stack"
+(schemefy!) "expression" "arity-hash" "stack"
 comment:
 #true
-(schemefy1a) "expression" "arity-hash" "stack" (function) "expression"
+(schemefy!a) "expression" "arity-hash" "stack" (function) "expression"
  
-(schemefy1a) "expression" "arity-hash" "stack" "function"
+(schemefy!a) "expression" "arity-hash" "stack" "function"
 comment:
 #true
-(schemefy1aa) "expression" "arity-hash" "stack" "function" (arity) "arity-hash" "function"
+(schemefy!aa) "expression" "arity-hash" "stack" "function" (arity) "arity-hash" "function"
  
-(schemefy1aa) "expression" "arity-hash" "stack" "function" "arity"
+(schemefy!aa) "expression" "arity-hash" "stack" "function" "arity"
 comment:
 (gather-count?) "function"
-(schemefy1) (pop) "expression" "arity-hash" (push) (zed->scheme) (first) "arity" "stack" (zed->scheme) (tails) "arity" "stack"
+(schemefy!) (pop) "expression" "arity-hash" (push) (zed->scheme) (first) "arity" "stack" (zed->scheme) (tails) "arity" "stack"
  
-(schemefy1aa) "expression" "arity-hash" "stack" "function" "arity"
+(schemefy!aa) "expression" "arity-hash" "stack" "function" "arity"
 comment:
 #true
-(schemefy1) (pop) "expression" "arity-hash" (push) (push) "function" (zed->scheme) (first) "arity" "stack" (zed->scheme) (tails) "arity" "stack"
+(schemefy!) (pop) "expression" "arity-hash" (push) (push) "function" (zed->scheme) (first) "arity" "stack" (zed->scheme) (tails) "arity" "stack"
  
 (sentence-less?) "sentence1" "sentence2"
 comment:
@@ -860,22 +860,22 @@ comment:
 (sentences) "program"
 comment:
 #true
-(002) "reverse" (sentences1) "program" nil nil
+(002) "reverse" (sentences!) "program" nil nil
  
-(sentences1) "program" "collect1" "collect2"
+(sentences!) "program" "collect1" "collect2"
 comment:
 (002) "null?" "program"
 "collect2"
  
-(sentences1) "program" "collect1" "collect2"
+(sentences!) "program" "collect1" "collect2"
 comment:
 (003) "eqv?" #newline (002) "car" "program"
-(sentences1) (002) "cdr" "program" nil (003) "cons" (002) "reverse" "collect1" "collect2"
+(sentences!) (002) "cdr" "program" nil (003) "cons" (002) "reverse" "collect1" "collect2"
  
-(sentences1) "program" "collect1" "collect2"
+(sentences!) "program" "collect1" "collect2"
 comment:
 #true
-(sentences1) (002) "cdr" "program" (003) "cons" (002) "car" "program" "collect1" "collect2"
+(sentences!) (002) "cdr" "program" (003) "cons" (002) "car" "program" "collect1" "collect2"
  
 (slashefy) "character"
 comment:
@@ -895,27 +895,27 @@ comment:
 (sort) "comparator" "jumble"
 comment:
 #true
-(002) "car" (sort2) "comparator" (sort1) "jumble"
+(002) "car" (sort!b) "comparator" (sort!a) "jumble"
  
-(sort1) "jumble"
+(sort!a) "jumble"
 comment:
 #true
 (003) "map" "list" "jumble"
  
-(sort2) "comparator" "jumble"
+(sort!b) "comparator" "jumble"
 comment:
 (002) "null?" "jumble"
 nil
  
-(sort2) "comparator" "jumble"
+(sort!b) "comparator" "jumble"
 comment:
 (002) "null?" (002) "cdr" "jumble"
 "jumble"
  
-(sort2) "comparator" "jumble"
+(sort!b) "comparator" "jumble"
 comment:
 #true
-(sort2) "comparator" (003) "cons" (merge) "comparator" (002) "car" "jumble" (002) "cadr" "jumble" (sort2) "comparator" (002) "cddr" "jumble"
+(sort!b) "comparator" (003) "cons" (merge) "comparator" (002) "car" "jumble" (002) "cadr" "jumble" (sort!b) "comparator" (002) "cddr" "jumble"
  
 (space-newline) "program"
 comment:
@@ -1006,26 +1006,26 @@ comment:
 comment:
 #true
 (002) "string->symbol" "part"
-
+ 
 (tab-replace) "program"
 comment:
 #true
-(002) "reverse" (tab-replace1) "program" nil
+(002) "reverse" (tab-replace!) "program" nil
  
-(tab-replace1) "program" "collect"
+(tab-replace!) "program" "collect"
 comment:
 (002) "null?" "program"
 "collect"
  
-(tab-replace1) "program" "collect"
+(tab-replace!) "program" "collect"
 comment:
 (003) "eqv?" #tab (002) "car" "program"
-(tab-replace1) (002) "cdr" "program" (003) "cons" #space "collect"
+(tab-replace!) (002) "cdr" "program" (003) "cons" #space "collect"
  
-(tab-replace1) "program" "collect"
+(tab-replace!) "program" "collect"
 comment:
 #true
-(tab-replace1) (002) "cdr" "program" (003) "cons" (002) "car" "program" "collect"
+(tab-replace!) (002) "cdr" "program" (003) "cons" (002) "car" "program" "collect"
  
 (tails) "number" "list"
 comment:
@@ -1057,16 +1057,16 @@ comment:
 #true
 (002) "string->symbol" (002) "list->string" "gather-verb"
  
-(write-all!) "program"
+(write-all) "program"
 comment:
 (002) "null?" "program"
 err
  
-(write-all!) "program"
+(write-all) "program"
 comment:
 #true
-(write-all!) (003) "begin" (002) "write-char" (002) "car" "program" (002) "cdr" "program"
-
+(write-all) (003) "begin" (002) "write-char" (002) "car" "program" (002) "cdr" "program"
+ 
 (zed->scheme) "value"
 comment:
 (002) "not" (002) "pair?" "value"
@@ -1075,21 +1075,19 @@ comment:
 (zed->scheme) "value"
 comment:
 #true
-(zed->scheme1) "value" nil
-
-(zed->scheme1) "value" "collect"
+(zed->scheme!) "value" nil
+ 
+(zed->scheme!) "value" "collect"
 comment:
 (002) "null?" "value"
 (002) "reverse" "collect"
-
-(zed->scheme1) "value" "collect"
+ 
+(zed->scheme!) "value" "collect"
 comment:
 #true
-(zed->scheme1) (!) "value" (003) "cons" (zed->scheme) (1) "value" "collect"
+(zed->scheme!) (!) "value" (003) "cons" (zed->scheme) (1) "value" "collect"
  
 (zedefy) "string"
 comment:
 #true
 (002) "string->symbol" (002) "list->string" (003) "append" (004) "list" #Z #E #D (flatten) (003) "map" symbol-character (002) "string->list" "string"
- 
- 
