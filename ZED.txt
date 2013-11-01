@@ -925,17 +925,17 @@ comment:
 (space-newline!) "program" "collect"
 comment:
 (003) "or" (002) "null?" "program" (002) "null?" (002) "cdr" "program"
-(gr) ""return"" (003) "append" "program" "collect"
+(003) "append" "program" "collect"
  
 (space-newline!) "program" "collect"
 comment:
 (003) "and" (003) "eqv?" #space (002) "car" "program" (003) "eqv?" #newline (002) "cadr" "program"
-(gr) ""dispose"" (space-newline!) (002) "cdr" "program" "collect"
+(space-newline!) (002) "cdr" "program" "collect"
  
 (space-newline!) "program" "collect"
 comment:
 #true
-(gr) ""save"" (space-newline!) (002) "cdr" "program" (003) "cons" (002) "car" "program" "collect"
+(space-newline!) (002) "cdr" "program" (003) "cons" (002) "car" "program" "collect"
  
 (stack)
 comment:
