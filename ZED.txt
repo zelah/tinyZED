@@ -203,7 +203,7 @@ comment:
 (comp!)
 comment:
 #true
-(comp!a) (combine-program-clauses) (by-three) (read-sentences) (discard-comments) (gr) ""(function-sort)"" (sentences) (leading-newline) (space-newline) (tab-replace) (newline-space-tab-repeats) (newline-space) (filter) not-return? (read-all)
+(comp!a) (combine-program-clauses) (by-three) (read-sentences) (discard-comments) (gr) ""(function-sort)"" (function-sort) (gr) ""(sentences)"" (sentences) (gr) ""(leading-newline)"" (leading-newline) (gr) ""(space-newline)"" (space-newline) (gr) ""(tab-replace)"" (tab-replace) (gr) ""(newline-space-tab-repeats)"" (newline-space-tab-repeats) (gr) ""(newline-space)"" (newline-space) (gr) ""(filter)"" (filter) not-return? (gr) ""(read-all)"" (read-all)
  
 (comp!a) "combined"
 comment:
