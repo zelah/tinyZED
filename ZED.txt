@@ -203,7 +203,7 @@ comment:
 (comp!)
 comment:
 #true
-(comp!a) (gr) ""(combine-program-clauses)"" (combine-program-clauses) (gr) ""(by-three)"" (by-three) (gr) ""(read-sentences)"" (read-sentences) (gr) ""(discard-comments)"" (discard-comments) (gr) ""(function-sort)"" (function-sort) (gr) ""(sentences)"" (sentences) (gr) ""(leading-newline)"" (leading-newline) (gr) ""(space-newline)"" (space-newline) (gr) ""(tab-replace)"" (tab-replace) (gr) ""(newline-space-tab-repeats)"" (newline-space-tab-repeats) (gr) ""(newline-space)"" (newline-space) (gr) ""(filter)"" (filter) not-return? (gr) ""(read-all)"" (read-all)
+(comp!a) (gr) ""(combine-program-clauses)"" (combine-program-clauses) (gr) ""(by-three)"" (by-three) (gr) ""(read-sentences)"" (read-sentences) (gr) ""(discard-comments)"" (discard-comments) (gr) ""(function-sort)"" (function-sort) (dr) (gr) ""(sentences)"" (sentences) (dr) (gr) ""(leading-newline)"" (leading-newline) (dr)(gr) ""(space-newline)"" (space-newline) (dr) (gr) ""(tab-replace)"" (tab-replace) (gr) ""(newline-space-tab-repeats)"" (newline-space-tab-repeats) (gr) ""(newline-space)"" (newline-space) (gr) ""(filter)"" (filter) not-return? (gr) ""(read-all)"" (read-all)
  
 (comp!a) "combined"
 comment:
