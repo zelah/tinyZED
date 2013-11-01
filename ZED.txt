@@ -203,7 +203,7 @@ comment:
 (comp!)
 comment:
 #true
-(comp!a) (combine-program-clauses) (by-three) (read-sentences) (discard-comments) (gr) ""(function-sort)"" (function-sort) (gr) ""(sentences)"" (sentences) (gr) ""(leading-newline)"" (leading-newline) (gr) ""(space-newline)"" (space-newline) (gr) ""(tab-replace)"" (tab-replace) (gr) ""(newline-space-tab-repeats)"" (newline-space-tab-repeats) (gr) ""(newline-space)"" (newline-space) (gr) ""(filter)"" (filter) not-return? (gr) ""(read-all)"" (read-all)
+(comp!a) (gr) ""(combine-program-clauses)"" (combine-program-clauses) (gr) ""(by-three)"" (by-three) (gr) ""(read-sentences)"" (read-sentences) (gr) ""(discard-comments)"" (discard-comments) (gr) ""(function-sort)"" (function-sort) (gr) ""(sentences)"" (sentences) (gr) ""(leading-newline)"" (leading-newline) (gr) ""(space-newline)"" (space-newline) (gr) ""(tab-replace)"" (tab-replace) (gr) ""(newline-space-tab-repeats)"" (newline-space-tab-repeats) (gr) ""(newline-space)"" (newline-space) (gr) ""(filter)"" (filter) not-return? (gr) ""(read-all)"" (read-all)
  
 (comp!a) "combined"
 comment:
@@ -925,17 +925,17 @@ comment:
 (space-newline!) "program" "collect"
 comment:
 (003) "or" (002) "null?" "program" (002) "null?" (002) "cdr" "program"
-(003) "append" "program" "collect"
+(gr) ""return"" (003) "append" "program" "collect"
  
 (space-newline!) "program" "collect"
 comment:
 (003) "and" (003) "eqv?" #space (002) "car" "program" (003) "eqv?" #newline (002) "cadr" "program"
-(space-newline!) (002) "cdr" "program" "collect"
+(gr) ""dispose"" (space-newline!) (002) "cdr" "program" "collect"
  
 (space-newline!) "program" "collect"
 comment:
 #true
-(space-newline!) (002) "cdr" "program" (003) "cons" (002) "car" "program" "collect"
+(gr) ""save"" (space-newline!) (002) "cdr" "program" (003) "cons" (002) "car" "program" "collect"
  
 (stack)
 comment:
