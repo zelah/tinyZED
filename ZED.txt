@@ -919,18 +919,23 @@ comment:
  
 (space-newline) "program"
 comment:
+#true
+(002) "reverse" (space-newline!) "program" nil
+
+(space-newline!) "program" "collect"
+comment:
 (003) "or" (002) "null?" "program" (002) "null?" (002) "cdr" "program"
-"program"
+(003) "append" "program" "collect"
  
-(space-newline) "program"
+(space-newline!) "program" "collect"
 comment:
 (003) "and" (003) "eqv?" #space (002) "car" "program" (003) "eqv?" #newline (002) "cadr" "program"
-(space-newline) (002) "cdr" "program"
+(space-newline!) (002) "cdr" "program" "collect"
  
-(space-newline) "program"
+(space-newline!) "program" "collect"
 comment:
 #true
-(003) "cons" (002) "car" "program" (space-newline) (002) "cdr" "program"
+(space-newline!) (002) "cdr" "program" (003) "cons" (002) "car" "program" "collect"
  
 (stack)
 comment:
