@@ -4,12 +4,12 @@
 comment:
 #true
 (!) (!) "list"
-
+ 
 (2) "list"
 comment:
 #true
 (1) (!) "list"
-
+ 
 (force1) "value"
 comment:
 (002) "promise?" "value"
@@ -194,6 +194,11 @@ comment:
 comment:
 #true
 (combine-all) (ready-program) "program"
+
+(comp)
+comment:
+#true
+(comp1)
  
 (comp1)
 comment:
@@ -304,16 +309,21 @@ comment:
 comment:
 (002) "not" (002) "pair?" "list"
 "list"
- 
+
 (first) "integer" "list"
 comment:
-(002) "zero?" "integer"
-nil
+#true
+(first!) "integer" "list" nil
  
-(first) "integer" "list"
+(first!) "integer" "list" "collect"
+comment:
+(003) "or" (002) "zero?" "integer" (002) "null?" "list"
+(002) "reverse" "collect"
+ 
+(first!) "integer" "list" "collect"
 comment:
 (003) ">" "integer" 0
-(c) (1) "list" (first) (003) "-" "integer" 1 (!) "list"
+(first!) (003) "-" "integer" 1 (!) "list" (003) "cons" (1) "list" "collect"
  
 (flatten) "object"
 comment:
@@ -654,7 +664,7 @@ comment:
 comment:
 (002) "string?" "value"
 (004) "string-append" ""\""" "value" ""\"""
-
+ 
 (pr1a) "value" "collect"
 comment:
 (002) "null?" "value"
@@ -684,7 +694,7 @@ comment:
 comment:
 #true
 (003) "cons" "object" "stack"
-
+ 
 (rd) "final" "function" "list"
 comment:
 #true
@@ -704,7 +714,7 @@ comment:
 comment:
 #true
 (002) "reverse" (read-all!1) nil
-
+ 
 (read-all!1) "collect"
 comment:
 #true
@@ -996,7 +1006,7 @@ comment:
 comment:
 #true
 (002) "string->symbol" "part"
-
+ 
 (tab-replace) "program"
 comment:
 #true
@@ -1056,7 +1066,7 @@ err
 comment:
 #true
 (write-all!) (003) "begin" (002) "write-char" (002) "car" "program" (002) "cdr" "program"
-
+ 
 (zed->scheme) "value"
 comment:
 (002) "not" (002) "pair?" "value"
@@ -1066,12 +1076,12 @@ comment:
 comment:
 #true
 (zed->scheme1) "value" nil
-
+ 
 (zed->scheme1) "value" "collect"
 comment:
 (002) "null?" "value"
 (002) "reverse" "collect"
-
+ 
 (zed->scheme1) "value" "collect"
 comment:
 #true
@@ -1081,5 +1091,6 @@ comment:
 comment:
 #true
 (002) "string->symbol" (002) "list->string" (003) "append" (004) "list" #Z #E #D (flatten) (003) "map" symbol-character (002) "string->list" "string"
+ 
  
  
