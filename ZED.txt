@@ -195,11 +195,6 @@ comment:
 #true
 (combine-all) (ready-program) "program"
  
-(comp)
-comment:
-#true
-(comp1)
-
 (comp1)
 comment:
 #true
@@ -309,21 +304,16 @@ comment:
 comment:
 (002) "not" (002) "pair?" "list"
 "list"
-
+ 
 (first) "integer" "list"
 comment:
-#true
-(first1) "integer" "list" nil
- 
-(first1) "integer" "list" "collect"
-comment:
 (002) "zero?" "integer"
-(002) "reverse" "collect"
+nil
  
-(first1) "integer" "list" "collect"
+(first) "integer" "list"
 comment:
 (003) ">" "integer" 0
-(first1) (003) "-" "integer" 1 (!) "list" (003) "cons" (1) "list"  "collect"
+(c) (1) "list" (first) (003) "-" "integer" 1 (!) "list"
  
 (flatten) "object"
 comment:
