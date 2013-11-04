@@ -1,4 +1,27 @@
 ;;; ZED.scm
+
+(replace-trailing-white-space) "program"
+comment:
+#true
+(002) "reverse" (replace-trailing-white-space!) (002) "reverse" "program"
+
+(replace-trailing-white-space!) "program"
+comment:
+(002) "null?" "program"
+nil
+
+(replace-trailing-white-space!) "program"
+comment:
+(005) "or" (003) "eqv?" (002) "car" "program" #space
+           (003) "eqv?" (002) "car" "program" #tab
+           (003) "eqv?" (002) "car" "program" #return
+           (003) "eqv?" (002) "car" "program" #newline
+(replace-trailing-white-space!) (002) "cdr" "program"
+
+(replace-trailing-white-space!) "program"
+comment:
+#true
+(003) "cons" #newline "program"
  
 (-2) "list"
 comment:
@@ -63,7 +86,7 @@ comment:
 (alpha)
 comment:
 #true
-(write-all) (flatten) (newlines) (by-four) (function-sort) (sentences) (leading-newline) (space-newline) (tab-replace) (newline-space-tab-repeats) (newline-space) (filter) not-return? (read-all)
+(write-all) (flatten) (newlines) (by-four) (function-sort) (sentences) (leading-newline) (space-newline) (tab-replace) (newline-space-tab-repeats) (newline-space) (filter) not-return? (replace-trailing-white-space) (read-all)
  
 (application?) "expression"
 comment:
@@ -203,7 +226,7 @@ comment:
 (comp!)
 comment:
 #true
-(comp!a) (gr) ""(combine-program-clauses)"" (combine-program-clauses) (gr) ""(by-three)"" (by-three) (gr) ""(read-sentences)"" (read-sentences) (gr) ""(discard-comments)"" (discard-comments) (gr) ""(function-sort)"" (function-sort) (gr) ""(sentences)"" (sentences) (gr) ""(leading-newline)"" (leading-newline) (gr) ""(space-newline)"" (space-newline) (gr) ""(tab-replace)"" (tab-replace) (gr) ""(newline-space-tab-repeats)"" (newline-space-tab-repeats) (gr) ""(newline-space)"" (newline-space) (gr) ""(filter)"" (filter) not-return? (gr) ""(read-all)"" (read-all)
+(comp!a) (gr) ""(combine-program-clauses)"" (combine-program-clauses) (gr) ""(by-three)"" (by-three) (gr) ""(read-sentences)"" (read-sentences) (gr) ""(discard-comments)"" (discard-comments) (gr) ""(function-sort)"" (function-sort) (gr) ""(sentences)"" (sentences) (gr) ""(leading-newline)"" (leading-newline) (gr) ""(space-newline)"" (space-newline) (gr) ""(tab-replace)"" (tab-replace) (gr) ""(newline-space-tab-repeats)"" (newline-space-tab-repeats) (gr) ""(newline-space)"" (newline-space) (gr) ""(filter)"" (filter) not-return? (gr) ""(replace-trailing-white-space)"" (replace-trailing-white-space) (gr) ""(read-all)"" (read-all)
  
 (comp!a) "combined"
 comment:
@@ -860,7 +883,7 @@ comment:
 (sentences) "program"
 comment:
 #true
-(002) "reverse" (sentences!) (003) "append" "program" (002) "list" #newline nil nil
+(002) "reverse" (sentences!) "program" nil nil
  
 (sentences!) "program" "collect1" "collect2"
 comment:
@@ -925,17 +948,17 @@ comment:
 (space-newline!) "program" "collect"
 comment:
 (003) "or" (002) "null?" "program" (002) "null?" (002) "cdr" "program"
-(gr) ""return"" (003) "append" "program" "collect"
+(003) "append" "program" "collect"
  
 (space-newline!) "program" "collect"
 comment:
 (003) "and" (003) "eqv?" #space (002) "car" "program" (003) "eqv?" #newline (002) "cadr" "program"
-(gr) ""dispose"" (space-newline!) (002) "cdr" "program" "collect"
+(space-newline!) (002) "cdr" "program" "collect"
  
 (space-newline!) "program" "collect"
 comment:
 #true
-(gr) ""save"" (space-newline!) (002) "cdr" "program" (003) "cons" (002) "car" "program" "collect"
+(space-newline!) (002) "cdr" "program" (003) "cons" (002) "car" "program" "collect"
  
 (stack)
 comment:
