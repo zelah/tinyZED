@@ -860,7 +860,7 @@ comment:
 (sentences) "program"
 comment:
 #true
-(002) "reverse" (sentences!) "program" nil nil
+(002) "reverse" (sentences!) (003) "append" "program" (002) "list" #newline nil nil
  
 (sentences!) "program" "collect1" "collect2"
 comment:
