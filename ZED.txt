@@ -1,5 +1,107 @@
 ;;; ZED.scm
 
+(noun) "noun-list"
+comment:
+#true
+(noun!) "noun-list" (002) "string->number" (002) "list->string" "noun-list"
+
+(noun!) "noun-list" "number?"
+comment:
+"number?"
+(make-exact) "noun-list"
+
+(noun!) "noun-list" "number?"
+comment:
+(literal?) "noun-list"
+(make-literal) "noun-list"
+
+(noun!) "noun-list" "number?"
+comment:
+(true?) "noun-list"
+""#t""
+
+(noun!) "noun-list" "number?"
+comment:
+(false?) "noun-list"
+""#f""
+
+(noun!) "noun-list" "number?"
+comment:
+(number-character?) "noun-list"
+(make-number-character) "noun-list"
+
+(noun!) "noun-list" "number?"
+comment:
+(normal-character?) "noun-list"
+(make-character) "noun-list"
+
+(noun!) "noun-list" "number?"
+comment:
+#true
+(make-ZED) "noun-list"
+
+(true?) "noun-list"
+comment:
+#true
+(003) "equal?" "noun-list" (006) "list" ## #t #r #u #e
+
+(false?) "noun-list"
+comment:
+#true
+(003) "equal?" "noun-list" (007) "list" ## #f #a #l #s #e
+
+(number-character?) "noun-list"
+comment:
+#true
+(004) "and" (003) "eqv?" (002) "car" "noun-list" ##
+            (003) "eqv?" (002) "cadr" "noun-list" #0
+            (002) "not" (002) "null?" (002) "cddr" "noun-list"
+
+(make-number-character) "noun-list"
+comment:
+#true
+(002) "list->string" (004) "list" ## #\ (002) "integer->char" (002) "string->number" (002) "list->string" (002) "cddr" "noun-list"
+
+(normal-character?) "noun-list"
+comment:
+#true
+(003) "eqv?" (002) "car" "noun-list" ##
+
+(make-character) "noun-list"
+comment:
+#true
+(002) "list->string" (003) "cons" ## (003) "cons" #\ (002) "cdr" "noun-list"
+
+(verb) "verb-list"
+comment:
+(literal?) "verb-list"
+(002) "list" (make-literal) "verb-list"
+
+(verb) "verb-list"
+comment:
+#true
+(002) "list" (make-ZED) "verb-list"
+
+(make-exact) "exact-list"
+comment:
+#true
+(002) "list->string" (003) "append" (003) "list" ## #e "exact-list"
+
+(literal?) "literal-list"
+comment:
+#true
+(003) "eqv?" #" (002) "car" "literal-list"
+
+(make-literal) "literal-list"
+comment:
+#true
+(002) "list->string" (002) "cdr" (002) "reverse" (002) "cdr" (002) "reverse" "literal-list"
+
+(make-ZED) "ZED-list"
+comment:
+#true
+(002) "list->string" (003) "append" (004) "list" #Z #E #D "ZED-list"
+
 (replace-trailing-white-space) "program"
 comment:
 #true
@@ -367,47 +469,7 @@ comment:
 comment:
 #true
 (flatten!) (002) "car" "object" (003) "append" (flatten!) (002) "cdr" "object" "collect"
- 
-(flexefy) "part"
-comment:
-(002) "symbol?" "part"
-(flexefy!) (002) "string->list" (002) "symbol->string" "part"
- 
-(flexefy) "part"
-comment:
-(002) "string?" "part"
-(002) "string->symbol" "part"
- 
-(flexefy) "part"
-comment:
-(002) "exact?" "part"
-"part"
- 
-(flexefy) "part"
-comment:
-#true
-(002) "string->number" (003) "string-append" ""#e"" (002) "number->string" "part"
- 
-(flexefy!) "part"
-comment:
-(003) "equal?" "part" (006) "list" ## #t #r #u #e
-#true
- 
-(flexefy!) "part"
-comment:
-(003) "equal?" "part" (007) "list" ## #f #a #l #s #e
-#false
- 
-(flexefy!) "part"
-comment:
-(003) "eqv?" ## (002) "car" "part"
-(002) "string->symbol" (002) "list->string" (003) "append" (003) "list" ## #\ (002) "cdr" "part"
- 
-(flexefy!) "part"
-comment:
-#true
-(zedefy) (002) "list->string" "part"
- 
+
 (function) "expression"
 comment:
 #true
@@ -538,16 +600,6 @@ comment:
 #true
 (002) "function" "list"
  
-(namefy) "part"
-comment:
-(002) "pair?" "part"
-(002) "list" (symbolize) (002) "car" "part"
- 
-(namefy) "part"
-comment:
-#true
-(flexefy) "part"
- 
 (newline-space) "program"
 comment:
 #true
@@ -628,41 +680,6 @@ comment:
 #true
 (002) "not" (003) "eqv?" #return "character"
  
-(noun) "gather-noun"
-comment:
-#true
-(noun!) (002) "list->string" "gather-noun"
- 
-(noun-number) "string" "number"
-comment:
-#true
-(noun-number!) "string" (002) "string->list" "string" "number"
- 
-(noun-number!) "string" "list" "number"
-comment:
-"number"
-"number"
- 
-(noun-number!) "string" "list" "number"
-comment:
-#true
-(noun-number!a) "string" "list" (002) "reverse" "list"
- 
-(noun-number!a) "string" "list" "reversed"
-comment:
-(003) "and" (003) "eqv?" #" (002) "car" "list" (003) "eqv?" #" (002) "car" "reversed"
-(002) "list->string" (002) "cdr" (002) "reverse" (002) "cdr" "reversed"
- 
-(noun-number!a) "string" "list" "reversed"
-comment:
-#true
-(002) "string->symbol" "string"
- 
-(noun!) "string"
-comment:
-#true
-(noun-number) "string" (002) "string->number" "string"
- 
 (pop) "stack"
 comment:
 #true
@@ -676,8 +693,14 @@ comment:
 (pr!) "value" "output-string"
 comment:
 #true
-(003) "begin" (003) "display" (pr!a) "value" nil "output-string" (002) "get-output-string" "output-string"
- 
+(003) "begin" (003) "display" (pr!a) "value" nil "output-string" (pr!b) "output-string" (002) "get-output-string" "output-string"
+
+(pr!b) "output-string" "value"
+comment:
+#true
+(003) "begin" (002) "close-output-port" "output-string"
+              "value"
+
 (pr!a) "value" "collect"
 comment:
 (002) "char?" "value"
@@ -756,59 +779,78 @@ comment:
 (read-sentence) "sentence"
 comment:
 #true
-(002) "reverse" (read-sentence!) "sentence" nil
+(read-sentence!b) (002) "reverse" (read-sentence!a) "sentence" nil
+                  (001) "open-output-string"
+
+(read-sentence!b) "list" "output-string"
+comment:
+#true
+(003) "begin" (003) "display" "list" "output-string"
+              (read-sentence!ba) "output-string" 
+                                 (002) "get-output-string" 
+                                       "output-string"
  
-(read-sentence!) "sentence" "collect"
+(read-sentence!ba) "output-string" "get-output-string"
+comment:
+#true
+(003) "begin" (002) "close-output-port" "output-string"
+              (read-sentence!baa) (002) "open-input-string"
+                                        "get-output-string"
+
+(read-sentence!baa) "input-string"
+comment:
+#true
+(read-sentence!baaa) "input-string" (002) "read" "input-string"
+
+(read-sentence!baaa) "input-string" "answer"
+comment:
+#true
+(003) "begin" (002) "close-input-port" "input-string"
+              "answer"
+
+(read-sentence!a) "sentence" "collect"
 comment:
 (002) "null?" "sentence"
 "collect"
  
-(read-sentence!) "sentence" "collect"
+(read-sentence!a) "sentence" "collect"
 comment:
 (003) "eqv?" #space (002) "car" "sentence"
-(read-sentence!) (002) "cdr" "sentence" "collect"
+(read-sentence!a) (002) "cdr" "sentence" "collect"
  
-(read-sentence!) "sentence" "collect"
+(read-sentence!a) "sentence" "collect"
 comment:
 (003) "eqv?" #( (002) "car" "sentence"
-(read-sentence!a) "sentence" (gather-verb) (002) "cdr" "sentence" "collect"
+(read-sentence!aa) "sentence" (gather-verb) (002) "cdr" "sentence" "collect"
  
-(read-sentence!) "sentence" "collect"
+(read-sentence!a) "sentence" "collect"
 comment:
 #true
-(read-sentence!b) "sentence" (gather-noun) "sentence" "collect"
+(read-sentence!ab) "sentence" (gather-noun) "sentence" "collect"
  
-(read-sentence!a) "sentence" "gather-verb" "collect"
+(read-sentence!aa) "sentence" "gather-verb" "collect"
 comment:
 #true 
-(read-sentence!) (tails) 
+(read-sentence!a) (tails) 
                    (003) "+" 2 (002) "length" 
                                      "gather-verb" 
                    "sentence" 
                  (003) "cons"
-                       (namefy)
-                         (002) "list" 
-                               (verb) "gather-verb" 
+                       (verb) "gather-verb" 
                        "collect"
  
-(read-sentence!b) "sentence" "gather-noun" "collect"
+(read-sentence!ab) "sentence" "gather-noun" "collect"
 comment:
 #true
-(read-sentence!) (tails) (002) "length" "gather-noun" 
+(read-sentence!a) (tails) (002) "length" "gather-noun" 
                          "sentence" 
-                 (003) "cons" (namefy) 
-                                (noun) "gather-noun"  
+                 (003) "cons" (noun) "gather-noun"  
                               "collect"
  
 (read-sentences) "sentences"
 comment:
 #true
-(read-sentences!) "sentences" nil
- 
-(read-sentences!) "sentences" "collect"
-comment:
-#true
-(003) "map" "reverse" (map-with) read-sentence! "sentences" "collect"
+(003) "map" "reverse" (003) "map" read-sentence "sentences"
  
 (ready-clause) "clause"
 comment:
@@ -965,76 +1007,6 @@ comment:
 #true
 nil
  
-(symbol-character) "character"
-comment:
-(003) "char=?" "character" #@
-(003) "list" #@ #@
- 
-(symbol-character) "character"
-comment:
-(003) "char=?" "character" #[
-(003) "list" #@ #1
- 
-(symbol-character) "character"
-comment:
-(003) "char=?" "character" #]
-(003) "list" #@ #2
- 
-(symbol-character) "character"
-comment:
-(003) "char=?" "character" #{
-(003) "list" #@ #3
- 
-(symbol-character) "character"
-comment:
-(003) "char=?" "character" #}
-(003) "list" #@ #4
- 
-(symbol-character) "character"
-comment:
-(003) "char=?" "character" #'
-(003) "list" #@ #q
- 
-(symbol-character) "character"
-comment:
-(003) "char=?" "character" #`
-(003) "list" #@ #Q
- 
-(symbol-character) "character"
-comment:
-(003) "char=?" "character" #,
-(003) "list" #@ #c
- 
-(symbol-character) "character"
-comment:
-(003) "char=?" "character" #:
-(003) "list" #@ #C
- 
-(symbol-character) "character"
-comment:
-(003) "char=?" "character" #;
-(003) "list" #@ #s
- 
-(symbol-character) "character"
-comment:
-(003) "char=?" "character" #\
-(003) "list" #@ #b
- 
-(symbol-character) "character"
-comment:
-#true
-(002) "list" "character"
- 
-(symbolize) "part"
-comment:
-(002) "symbol?" "part"
-(zedefy) (002) "symbol->string" "part"
- 
-(symbolize) "part"
-comment:
-#true
-(002) "string->symbol" "part"
- 
 (tab-replace) "program"
 comment:
 #true
@@ -1075,16 +1047,6 @@ comment:
 #true
 (002) "car" "stack"
  
-(verb) "gather-verb"
-comment:
-(004) "and" (002) "not" (002) "null?" (002) "cdr" "gather-verb" (003) "eqv?" #" (002) "car" "gather-verb" (003) "eqv?" #" (002) "car" (002) "reverse" "gather-verb"
-(002) "list->string" (002) "cdr" (002) "reverse" (002) "cdr" (002) "reverse" "gather-verb"
- 
-(verb) "gather-verb"
-comment:
-#true
-(002) "string->symbol" (002) "list->string" "gather-verb"
- 
 (write-all) "program"
 comment:
 (002) "null?" "program"
@@ -1114,8 +1076,3 @@ comment:
 comment:
 #true
 (zed->scheme!) (!) "value" (003) "cons" (zed->scheme) (1) "value" "collect"
- 
-(zedefy) "string"
-comment:
-#true
-(002) "string->symbol" (002) "list->string" (003) "append" (004) "list" #Z #E #D (flatten) (003) "map" symbol-character (002) "string->list" "string"
