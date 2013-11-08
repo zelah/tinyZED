@@ -328,7 +328,7 @@ comment:
 (comp!)
 comment:
 #true
-(comp!a) (gr) ""(combine-program-clauses)"" (combine-program-clauses) (gr) ""(by-three)"" (by-three) (gr) ""(read-sentences)"" (read-sentences) (gr) ""(discard-comments)"" (discard-comments) (gr) ""(function-sort)"" (function-sort) (gr) ""(sentences)"" (sentences) (gr) ""(leading-newline)"" (leading-newline) (gr) ""(space-newline)"" (space-newline) (gr) ""(tab-replace)"" (tab-replace) (gr) ""(newline-space-tab-repeats)"" (newline-space-tab-repeats) (gr) ""(newline-space)"" (newline-space) (gr) ""(filter)"" (filter) not-return? (gr) ""(replace-trailing-white-space)"" (replace-trailing-white-space) (gr) ""(read-all)"" (read-all)
+(comp!a) (combine-program-clauses) (by-three) (read-sentences) (discard-comments) (function-sort) (sentences) (leading-newline) (space-newline) (tab-replace) (newline-space-tab-repeats) (newline-space) (filter) not-return? (replace-trailing-white-space) (read-all)
  
 (comp!a) "combined"
 comment:
@@ -444,6 +444,11 @@ comment:
 comment:
 (003) "or" (002) "zero?" "integer" (002) "null?" "list"
 (002) "reverse" "collect"
+
+(first!) "integer" "list" "collect"
+comment:
+(002) "not" (002) "pair?" "list"
+(002) "reverse" (003) "cons" "list" "collect"
  
 (first!) "integer" "list" "collect"
 comment:
@@ -483,7 +488,16 @@ comment:
 (functionize) "clause" "arity-hash"
 comment:
 #true
-(004) "list" "'define" (003) "cons" (clause-name) "clause" (clause-arguments) "clause" (003) "cons" "'cond" (003) "append" (condefy) (map-with) schemefy (clause-body) "clause" "arity-hash" (002) "list" (003) "list" "'else" "'ZEDerr"
+(004) "list" 
+      "'define" 
+      (003) "cons" (clause-name) "clause" 
+                   (clause-arguments) "clause" 
+      (003) "cons" "'cond" 
+                   (003) "append" 
+                         (condefy) (map-with) schemefy
+                                              (clause-body) "clause"
+                                              "arity-hash"
+                         (002) "list" (003) "list" "'else" "'ZEDerr"
  
 (gather-count?) "symbol"
 comment:
@@ -724,7 +738,7 @@ comment:
 (pr!a) "value" "collect"
 comment:
 #true
-(pr!a) (!) "value" (003) "cons" (pr!a) (1) "value" "collect"
+(pr!a) (!) "value" (003) "cons" (pr!a) (1) "value" nil "collect"
  
 (primitives)
 comment:
@@ -850,7 +864,7 @@ comment:
 (read-sentences) "sentences"
 comment:
 #true
-(003) "map" "reverse" (003) "map" read-sentence "sentences"
+(003) "map" read-sentence "sentences"
  
 (ready-clause) "clause"
 comment:
@@ -865,37 +879,57 @@ comment:
 (schemefy) "expression" "arity-hash"
 comment:
 #true
-(002) "list" (schemefy!) (002) "reverse" "expression" "arity-hash" (stack)
+(002) "list" 
+      (schemefy!) (002) "reverse" "expression" 
+                  "arity-hash" 
+                  (stack)
  
 (schemefy!) "expression" "arity-hash" "stack"
 comment:
-(002) "zero?" (002) "length" "expression"
+(002) "null?" "expression"
 (top) "stack"
  
 (schemefy!) "expression" "arity-hash" "stack"
 comment:
 (002) "not" (application?) "expression"
-(schemefy!) (pop) "expression" "arity-hash" (push) (top) "expression" "stack"
+(schemefy!) (pop) "expression" 
+            "arity-hash" 
+            (push) (top) "expression" 
+                   "stack"
  
 (schemefy!) "expression" "arity-hash" "stack"
 comment:
 #true
-(schemefy!a) "expression" "arity-hash" "stack" (function) "expression"
+(schemefy!a) "expression" 
+             "arity-hash" 
+             "stack" 
+             (function) "expression"
  
 (schemefy!a) "expression" "arity-hash" "stack" "function"
 comment:
 #true
-(schemefy!aa) "expression" "arity-hash" "stack" "function" (arity) "arity-hash" "function"
+(schemefy!aa) "expression" 
+              "arity-hash" 
+              "stack" 
+              "function" 
+              (arity) "arity-hash" "function"
  
 (schemefy!aa) "expression" "arity-hash" "stack" "function" "arity"
 comment:
 (gather-count?) "function"
-(schemefy!) (pop) "expression" "arity-hash" (push) (zed->scheme) (first) "arity" "stack" (zed->scheme) (tails) "arity" "stack"
+(schemefy!) (pop) "expression" 
+            "arity-hash" 
+            (push) (zed->scheme) (first) "arity" "stack"
+                   (zed->scheme) (tails) "arity" "stack"
  
 (schemefy!aa) "expression" "arity-hash" "stack" "function" "arity"
 comment:
 #true
-(schemefy!) (pop) "expression" "arity-hash" (push) (push) "function" (zed->scheme) (first) "arity" "stack" (zed->scheme) (tails) "arity" "stack"
+(schemefy!) (pop) "expression" 
+            "arity-hash" 
+            (push) (push) "function"
+                          (zed->scheme) (first) "arity" "stack"
+                   (zed->scheme) (tails) "arity" "stack"
  
 (sentence-less?) "sentence1" "sentence2"
 comment:
