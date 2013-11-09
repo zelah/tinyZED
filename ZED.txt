@@ -718,27 +718,56 @@ comment:
 (pr!a) "value" "collect"
 comment:
 (002) "char?" "value"
-(002) "list->string" (003) "list" ## "value"
+(pr!aa) (002) "list->string" (003) "list" ## "value"
+        "collect"
  
 (pr!a) "value" "collect"
 comment:
 (002) "string?" "value"
-(004) "string-append" ""\""" "value" ""\"""
+(pr!aa) (004) "string-append" ""\""" "value" ""\"""
+        "collect"
+
+(pr!a) "value" "collect"
+comment:
+(002) "symbol?" "value"
+(pr!aa) (002) "symbol->string" "value"
+        "collect"
+
+(pr!a) "value" "collect"
+comment:
+(002) "number?" "value"
+(pr!aa) (002) "number->string" "value"
+        "collect"
+
+(pr!a) "value" "collect"
+comment:
+(003) "and" (002) "boolean?" "value" "value"
+(pr!aa) ""#true"" "collect"
+
+(pr!a) "value" "collect"
+comment:
+(002) "boolean?" "value"
+(pr!aa) ""#false"" "collect"
  
 (pr!a) "value" "collect"
 comment:
 (002) "null?" "value"
 (002) "reverse" "collect"
- 
-(pr!a) "value" "collect"
-comment:
-(002) "not" (002) "pair?" "value"
-"value"
- 
+
 (pr!a) "value" "collect"
 comment:
 #true
 (pr!a) (!) "value" (003) "cons" (pr!a) (1) "value" nil "collect"
+
+(pr!aa) "string" "collect"
+comment:
+(002) "null?" "collect"
+"string"
+
+(pr!aa) "string" "collect"
+comment:
+#true
+(002) "reverse" (003) "cons" "string" (003) "cons" ""."" "collect"
  
 (primitives)
 comment:
@@ -880,19 +909,19 @@ comment:
 comment:
 #true
 (002) "list" 
-      (schemefy!) (002) "reverse" "expression" 
-                  "arity-hash" 
+      (schemefy!) (002) "reverse" (drr) "expression" 
+                  (drr) "arity-hash" 
                   (stack)
  
 (schemefy!) "expression" "arity-hash" "stack"
 comment:
 (002) "null?" "expression"
-(top) "stack"
+(grr) "stack" (top) "stack"
  
 (schemefy!) "expression" "arity-hash" "stack"
 comment:
 (002) "not" (application?) "expression"
-(schemefy!) (pop) "expression" 
+(grr) "stack" (schemefy!) (pop) "expression" 
             "arity-hash" 
             (push) (top) "expression" 
                    "stack"
@@ -900,7 +929,7 @@ comment:
 (schemefy!) "expression" "arity-hash" "stack"
 comment:
 #true
-(schemefy!a) "expression" 
+(grr) "stack" (schemefy!a) "expression" 
              "arity-hash" 
              "stack" 
              (function) "expression"
