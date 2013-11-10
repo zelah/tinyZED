@@ -1,5 +1,3 @@
-;;; ZED.scm
-
 (noun) "noun-list"
 comment:
 #true
@@ -193,7 +191,7 @@ comment:
 (application?) "expression"
 comment:
 #true
-(003) "and" (002) "not" (002) "null?" "expression" (002) "pair?" (002) "car" "expression"
+(004) "and" (002) "not" (002) "null?" "expression" (002) "pair?" (002) "car" "expression" (002) "null?" (002) "cdar" "expression"
  
 (arity) "arity-hash" "function"
 comment:
@@ -338,7 +336,7 @@ comment:
 (comp!aa) "programized"
 comment:
 #true
-(004) "begin" (002) "display" (primitives) (001) "newline" (002) "display" "programized"
+(004) "begin" (002) "display" (primitives) (001) "newline" (002) "write" "programized"
  
 (condefy) "expressions"
 comment:
@@ -909,30 +907,30 @@ comment:
 comment:
 #true
 (002) "list" 
-      (schemefy!) (002) "reverse" (drr) "expression" 
-                  (drr) "arity-hash" 
+      (schemefy!) (002) "reverse" "expression" 
+                  "arity-hash" 
                   (stack)
  
 (schemefy!) "expression" "arity-hash" "stack"
 comment:
 (002) "null?" "expression"
-(grr) "stack" (top) "stack"
+(top) "stack"
  
 (schemefy!) "expression" "arity-hash" "stack"
 comment:
-(002) "not" (application?) "expression"
-(grr) "stack" (schemefy!) (pop) "expression" 
-            "arity-hash" 
-            (push) (top) "expression" 
-                   "stack"
- 
-(schemefy!) "expression" "arity-hash" "stack"
-comment:
-#true
-(grr) "stack" (schemefy!a) "expression" 
+(application?) "expression"
+(schemefy!a) "expression" 
              "arity-hash" 
              "stack" 
              (function) "expression"
+
+(schemefy!) "expression" "arity-hash" "stack"
+comment:
+#true
+(schemefy!) (002) "cdr" "expression" 
+            "arity-hash" 
+            (push) (002) "car" "expression" 
+                   "stack"
  
 (schemefy!a) "expression" "arity-hash" "stack" "function"
 comment:
@@ -946,19 +944,19 @@ comment:
 (schemefy!aa) "expression" "arity-hash" "stack" "function" "arity"
 comment:
 (gather-count?) "function"
-(schemefy!) (pop) "expression" 
+(schemefy!) (002) "cdr" "expression" 
             "arity-hash" 
-            (push) (zed->scheme) (first) "arity" "stack"
-                   (zed->scheme) (tails) "arity" "stack"
+            (push) (first) "arity" "stack"
+                   (tails) "arity" "stack"
  
 (schemefy!aa) "expression" "arity-hash" "stack" "function" "arity"
 comment:
 #true
-(schemefy!) (pop) "expression" 
+(schemefy!) (002) "cdr" "expression" 
             "arity-hash" 
-            (push) (push) "function"
-                          (zed->scheme) (first) "arity" "stack"
-                   (zed->scheme) (tails) "arity" "stack"
+            (push) (003) "cons" "function"
+                                (first) "arity" "stack"
+                   (tails) "arity" "stack"
  
 (sentence-less?) "sentence1" "sentence2"
 comment:
