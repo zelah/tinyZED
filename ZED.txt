@@ -1,3 +1,28 @@
+(for-each) effect list
+comment:
+#true
+(003) "for-each" effect list
+
+(-) number1 number2
+comment:
+#true
+(003) "-" number1 number2
+
+(*) number1 number2
+comment:
+#true
+(003) "*" number1 number2
+
+(/) number1 number2
+comment:
+#true
+(003) "/" number1 number2
+
+(count-by) step number
+comment:
+#true
+(c) number (count-by) step (+) number step
+
 (!) "pair"
 comment:
 #true
@@ -76,7 +101,7 @@ comment:
 (arity-hash) "program"
 comment:
 #true
-(003) "append" (003) "map" arity-hash! "program" (003) "append" (007) "list" (003) "cons" "'ZED001" 1 (003) "cons" "'ZEDor" 2 (003) "cons" "'ZEDand" 2 (003) "cons" "'ZEDse" 2 (003) "cons" "'ZEDc" 2 (003) "cons" "'ZEDquote" 1 (099) "list" (003) "cons" "'ZED002" 2 (003) "cons" "'ZED003" 3 (003) "cons" "'ZED004" 4 (003) "cons" "'ZED005" 5 (003) "cons" "'ZED006" 6 (003) "cons" "'ZED007" 7 (003) "cons" "'ZED008" 8 (003) "cons" "'ZED009" 9 (003) "cons" "'ZED010" 10 (003) "cons" "'ZED011" 11 (003) "cons" "'ZED012" 12 (003) "cons" "'ZED013" 13 (003) "cons" "'ZED014" 14 (003) "cons" "'ZED015" 15 (003) "cons" "'ZED016" 16 (003) "cons" "'ZED017" 17 (003) "cons" "'ZED018" 18 (003) "cons" "'ZED019" 19 (003) "cons" "'ZED020" 20 (003) "cons" "'ZED021" 21 (003) "cons" "'ZED022" 22 (003) "cons" "'ZED023" 23 (003) "cons" "'ZED024" 24 (003) "cons" "'ZED025" 25 (003) "cons" "'ZED026" 26 (003) "cons" "'ZED027" 27 (003) "cons" "'ZED028" 28 (003) "cons" "'ZED029" 29 (003) "cons" "'ZED030" 30 (003) "cons" "'ZED031" 31 (003) "cons" "'ZED032" 32 (003) "cons" "'ZED033" 33 (003) "cons" "'ZED034" 34 (003) "cons" "'ZED035" 35 (003) "cons" "'ZED036" 36 (003) "cons" "'ZED037" 37 (003) "cons" "'ZED038" 38 (003) "cons" "'ZED039" 39 (003) "cons" "'ZED040" 40 (003) "cons" "'ZED041" 41 (003) "cons" "'ZED042" 42 (003) "cons" "'ZED043" 43 (003) "cons" "'ZED044" 44 (003) "cons" "'ZED045" 45 (003) "cons" "'ZED046" 46 (003) "cons" "'ZED047" 47 (003) "cons" "'ZED048" 48 (003) "cons" "'ZED049" 49 (003) "cons" "'ZED050" 50 (003) "cons" "'ZED051" 51 (003) "cons" "'ZED052" 52 (003) "cons" "'ZED053" 53 (003) "cons" "'ZED054" 54 (003) "cons" "'ZED055" 55 (003) "cons" "'ZED056" 56 (003) "cons" "'ZED057" 57 (003) "cons" "'ZED058" 58 (003) "cons" "'ZED059" 59 (003) "cons" "'ZED060" 60 (003) "cons" "'ZED061" 61 (003) "cons" "'ZED062" 62 (003) "cons" "'ZED063" 63 (003) "cons" "'ZED064" 64 (003) "cons" "'ZED065" 65 (003) "cons" "'ZED066" 66 (003) "cons" "'ZED067" 67 (003) "cons" "'ZED068" 68 (003) "cons" "'ZED069" 69 (003) "cons" "'ZED070" 70 (003) "cons" "'ZED071" 71 (003) "cons" "'ZED072" 72 (003) "cons" "'ZED073" 73 (003) "cons" "'ZED074" 74 (003) "cons" "'ZED075" 75 (003) "cons" "'ZED076" 76 (003) "cons" "'ZED077" 77 (003) "cons" "'ZED078" 78 (003) "cons" "'ZED079" 79 (003) "cons" "'ZED080" 80 (003) "cons" "'ZED081" 81 (003) "cons" "'ZED082" 82 (003) "cons" "'ZED083" 83 (003) "cons" "'ZED084" 84 (003) "cons" "'ZED085" 85 (003) "cons" "'ZED086" 86 (003) "cons" "'ZED087" 87 (003) "cons" "'ZED088" 88 (003) "cons" "'ZED089" 89 (003) "cons" "'ZED090" 90 (003) "cons" "'ZED091" 91 (003) "cons" "'ZED092" 92 (003) "cons" "'ZED093" 93 (003) "cons" "'ZED094" 94 (003) "cons" "'ZED095" 95 (003) "cons" "'ZED096" 96 (003) "cons" "'ZED097" 97 (003) "cons" "'ZED098" 98 (003) "cons" "'ZED099" 99
+(003) "append" (003) "map" arity-hash! "program" (003) "append" (007) "list" (003) "cons" "'ZED001" 1 (003) "cons" "'or" 2 (003) "cons" "'and" 2 (003) "cons" "'begin" 2 (003) "cons" "'ZEDc" 2 (003) "cons" "'quote" 1 (099) "list" (003) "cons" "'ZED002" 2 (003) "cons" "'ZED003" 3 (003) "cons" "'ZED004" 4 (003) "cons" "'ZED005" 5 (003) "cons" "'ZED006" 6 (003) "cons" "'ZED007" 7 (003) "cons" "'ZED008" 8 (003) "cons" "'ZED009" 9 (003) "cons" "'ZED010" 10 (003) "cons" "'ZED011" 11 (003) "cons" "'ZED012" 12 (003) "cons" "'ZED013" 13 (003) "cons" "'ZED014" 14 (003) "cons" "'ZED015" 15 (003) "cons" "'ZED016" 16 (003) "cons" "'ZED017" 17 (003) "cons" "'ZED018" 18 (003) "cons" "'ZED019" 19 (003) "cons" "'ZED020" 20 (003) "cons" "'ZED021" 21 (003) "cons" "'ZED022" 22 (003) "cons" "'ZED023" 23 (003) "cons" "'ZED024" 24 (003) "cons" "'ZED025" 25 (003) "cons" "'ZED026" 26 (003) "cons" "'ZED027" 27 (003) "cons" "'ZED028" 28 (003) "cons" "'ZED029" 29 (003) "cons" "'ZED030" 30 (003) "cons" "'ZED031" 31 (003) "cons" "'ZED032" 32 (003) "cons" "'ZED033" 33 (003) "cons" "'ZED034" 34 (003) "cons" "'ZED035" 35 (003) "cons" "'ZED036" 36 (003) "cons" "'ZED037" 37 (003) "cons" "'ZED038" 38 (003) "cons" "'ZED039" 39 (003) "cons" "'ZED040" 40 (003) "cons" "'ZED041" 41 (003) "cons" "'ZED042" 42 (003) "cons" "'ZED043" 43 (003) "cons" "'ZED044" 44 (003) "cons" "'ZED045" 45 (003) "cons" "'ZED046" 46 (003) "cons" "'ZED047" 47 (003) "cons" "'ZED048" 48 (003) "cons" "'ZED049" 49 (003) "cons" "'ZED050" 50 (003) "cons" "'ZED051" 51 (003) "cons" "'ZED052" 52 (003) "cons" "'ZED053" 53 (003) "cons" "'ZED054" 54 (003) "cons" "'ZED055" 55 (003) "cons" "'ZED056" 56 (003) "cons" "'ZED057" 57 (003) "cons" "'ZED058" 58 (003) "cons" "'ZED059" 59 (003) "cons" "'ZED060" 60 (003) "cons" "'ZED061" 61 (003) "cons" "'ZED062" 62 (003) "cons" "'ZED063" 63 (003) "cons" "'ZED064" 64 (003) "cons" "'ZED065" 65 (003) "cons" "'ZED066" 66 (003) "cons" "'ZED067" 67 (003) "cons" "'ZED068" 68 (003) "cons" "'ZED069" 69 (003) "cons" "'ZED070" 70 (003) "cons" "'ZED071" 71 (003) "cons" "'ZED072" 72 (003) "cons" "'ZED073" 73 (003) "cons" "'ZED074" 74 (003) "cons" "'ZED075" 75 (003) "cons" "'ZED076" 76 (003) "cons" "'ZED077" 77 (003) "cons" "'ZED078" 78 (003) "cons" "'ZED079" 79 (003) "cons" "'ZED080" 80 (003) "cons" "'ZED081" 81 (003) "cons" "'ZED082" 82 (003) "cons" "'ZED083" 83 (003) "cons" "'ZED084" 84 (003) "cons" "'ZED085" 85 (003) "cons" "'ZED086" 86 (003) "cons" "'ZED087" 87 (003) "cons" "'ZED088" 88 (003) "cons" "'ZED089" 89 (003) "cons" "'ZED090" 90 (003) "cons" "'ZED091" 91 (003) "cons" "'ZED092" 92 (003) "cons" "'ZED093" 93 (003) "cons" "'ZED094" 94 (003) "cons" "'ZED095" 95 (003) "cons" "'ZED096" 96 (003) "cons" "'ZED097" 97 (003) "cons" "'ZED098" 98 (003) "cons" "'ZED099" 99
 
 (by-four!) "sentences" "collect"
 comment:
@@ -465,6 +490,36 @@ comment:
 
 (make-ZED) "ZED-list"
 comment:
+(003) "equal?" "ZED-list" (004) "list" #e #r #r
+""'err""
+
+(make-ZED) "ZED-list"
+comment:
+(003) "equal?" "ZED-list" (004) "list" #n #i #l
+""'()""
+
+(make-ZED) "ZED-list"
+comment:
+(003) "equal?" "ZED-list" (004) "list" #a #n #d
+""and""
+           
+(make-ZED) "ZED-list"
+comment:
+(003) "equal?" "ZED-list" (003) "list" #o #r
+""or""
+           
+(make-ZED) "ZED-list"
+comment:
+(003) "equal?" "ZED-list" (006) "list" #q #u #o #t #e
+""quote""
+
+(make-ZED) "ZED-list"
+comment:
+(003) "equal?" "ZED-list" (003) "list" #s #e
+""begin""
+
+(make-ZED) "ZED-list"
+comment:
 #true
 (002) "list->string" (003) "append" (004) "list" #Z #E #D "ZED-list"
 
@@ -761,7 +816,7 @@ comment:
 (primitives)
 comment:
 #true
-(002) "quote" (008) "begin" (003) "define-macro" (003) or "a" "b" (002) "quasiquote" (003) "or" (002) "unquote" "a" (002) "unquote" "b" (003) "define-macro" (003) and "a" "b" (002) "quasiquote" (003) "and" (002) "unquote" "a" (002) "unquote" "b" (003) "define-macro" (003) se "a" "b" (002) "quasiquote" (003) "begin" (002) "unquote" "a" (002) "unquote" "b" (003) "define-macro" (003) c "a" "b" (002) "quasiquote" (003) "cons" (002) "delay" (002) "unquote" "a" (002) "delay" (002) "unquote" "b" (003) "define-macro" (002) quote "a" (002) "quasiquote" (002) "unquote" "a" (003) "define" err "'err" (003) "define" nil "'()"
+(002) "quote" (002) "begin" (003) "define-macro" (003) c "a" "b" (002) "quasiquote" (003) "cons" (002) "delay" (002) "unquote" "a" (002) "delay" (002) "unquote" "b"
 
 (programize) "program" "arity-hash"
 comment:
@@ -982,21 +1037,6 @@ comment:
 comment:
 #true
 (002) "reverse" (sentences!) "program" nil nil
-
-(slashefy) "character"
-comment:
-(003) "eqv?" #" "character"
-(003) "list" #\ #"
-
-(slashefy) "character"
-comment:
-(003) "eqv?" #\ "character"
-(003) "list" #\ #\
-
-(slashefy) "character"
-comment:
-#true
-(002) "list" "character"
 
 (sort!a) "jumble"
 comment:
