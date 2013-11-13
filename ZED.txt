@@ -1,3 +1,8 @@
+(test)
+comment:
+(and) (or) #false #true (or) #true #false
+(se) (dr) (quote) 33 (dr) (quote) ""thirty-three""
+
 (for-each) effect list
 comment:
 #true
@@ -421,7 +426,7 @@ comment:
 (functionize) "clause" "arity-hash"
 comment:
 #true
-(004) "list" "'define" (003) "cons" (clause-name) "clause" (clause-arguments) "clause" (003) "cons" "'cond" (003) "append" (condefy) (map-with) schemefy (clause-body) "clause" "arity-hash" (002) "list" (003) "list" "'else" "'ZEDerr"
+(004) "list" "'define" (003) "cons" (clause-name) "clause" (clause-arguments) "clause" (003) "cons" "'cond" (003) "append" (condefy) (map-with) schemefy (clause-body) "clause" "arity-hash" (002) "list" (003) "list" "'else" err
 
 (gather-count?!) "candidate"
 comment:
