@@ -1,7 +1,12 @@
 (test)
 comment:
 (and) (or) #false #true (or) #true #false
-(se) (dr) (quote) 33 (dr) (quote) ""thirty-three""
+(dr) (!) (c) ""hide"" ""show""
+
+(delay-wrap) "expression"
+comment:
+#true
+(003) "list" "'delay" "expression"
 
 (for-each) effect list
 comment:
@@ -231,7 +236,7 @@ comment:
 (comp!aa) "programized"
 comment:
 #true
-(004) "begin" (002) "display" (primitives) (001) "newline" (002) "write" "programized"
+(002) "write" "programized"
 
 (comp)
 comment:
@@ -818,11 +823,6 @@ comment:
 #true
 (pr!) "value" (001) "open-output-string"
 
-(primitives)
-comment:
-#true
-(002) "quote" (002) "begin" (003) "define-macro" (003) c "a" "b" (002) "quasiquote" (003) "cons" (002) "delay" (002) "unquote" "a" (002) "delay" (002) "unquote" "b"
-
 (programize) "program" "arity-hash"
 comment:
 #true
@@ -987,6 +987,11 @@ comment:
 comment:
 (gather-count?) "function"
 (schemefy!) (002) "cdr" "expression" "arity-hash" (push) (first) "arity" "stack" (tails) "arity" "stack"
+
+(schemefy!aa) "expression" "arity-hash" "stack" "function" "arity"
+comment:
+(003) "eq?" "function" "'ZEDc"
+(schemefy!) (002) "cdr" "expression" "arity-hash" (push) (003) "cons" "'cons" (003) "map" delay-wrap (first) "arity" "stack" (tails) "arity" "stack"
 
 (schemefy!aa) "expression" "arity-hash" "stack" "function" "arity"
 comment:
