@@ -1,3 +1,138 @@
+(printFunction) function
+comment:
+#true
+(003) "begin" (003) "for-each" "display" (makeFunctionSignature) (top) (pop) function
+                      (002) "display" (makeFunctionBody) (pop) (reverse) (pop) (reverse) (top) (pop) (pop) function
+
+(makeFunctionBody) arms
+comment:
+#true
+(003) "apply" "string-append" (push) ""{"" (push) ""return"" (push) (rd) ""0"" ternaryCombiner arms (002) "list" "";}""
+
+(ternaryCombiner) arm next
+comment:
+#true
+(ternaryCombiner1) (003) "map" callingConvention arm next
+
+(ternaryCombiner1) arm next
+comment:
+#true
+(ternary) (top) arm (top) (pop) arm next
+
+(callingConvention) expression
+comment:
+(002) "list?" expression
+(callingConvention1) (003) "map" callingConvention expression
+
+(callingConvention) expression
+comment:
+#true
+(callingConvention2) expression
+
+(callingConvention2) part
+comment:
+(002) "boolean?" part
+(integerBoolean) part
+
+(callingConvention2) part
+comment:
+(002) "char?" part
+(002) "number->string" (002) "char->integer" part
+
+(callingConvention2) part
+comment:
+#true
+(callingConvention21) part (001) "open-output-string"
+
+(callingConvention21) part output-string
+comment:
+#true
+(003) "begin" (003) "write" part output-string (callingConvention211) output-string (002) "get-output-string" output-string
+
+(callingConvention211) output-string string
+comment:
+#true
+(003) "begin" (002) "close-output-port" output-string string
+
+(integerBoolean) bool
+comment:
+bool
+""1""
+
+(integerBoolean) bool
+comment:
+#true
+""0""
+
+(callingConvention1) strings
+comment:
+#true
+(003) "apply" "string-append" (push) (top) strings (push) ""("" (003) "append" (add-between) "","" (pop) strings (002) "list" "")""
+
+(ternary) if then else
+comment:
+#true
+(003) "apply" "string-append" (012) "list" ""("" if "")"" ""?"" ""("" then "")"" "":"" ""("" else "")""
+
+(addBetweenTwo) item stack
+comment:
+(null?) stack
+nil
+
+(addBetweenTwo) item stack
+comment:
+(null?) (pop) (pop) stack
+stack
+
+(addBetweenTwo) item stack
+comment:
+#true
+(push) (top) stack
+  (push) (top) (pop) stack
+    (push) item
+      (addBetweenTwo) item (pop) (pop) stack
+
+(makeFunctionSignature1) stack
+comment:
+#true
+(push) (top) stack
+  (push) #space
+    (push) (top) (pop) stack
+      (push) #(
+        (003) "append"
+                  (add-between) #space (addBetweenTwo) #, (pop) (pop) stack
+                  (002) "list" #)
+
+(makeFunctionSignature) stack
+comment:
+#true
+(makeFunctionSignature1) (zip-function-signature) stack
+
+(string) theString
+comment:
+#true
+(004) "string-append" ""\""" theString ""\"""
+
+(zip-function-signature) signature
+comment:
+#true
+(zip-function-signature1) signature (/) (002) "length" signature 2
+
+(zip-function-signature1) signature half-length
+comment:
+#true
+(zip-function-signature11) (tails) half-length signature (first) half-length signature
+
+(zip-function-signature11) types identifiers
+comment:
+(null?) identifiers
+nil
+
+(zip-function-signature11) types identifiers
+comment:
+#true
+(003) "cons" (002) "car" types (003) "cons" (002) "car" identifiers (zip-function-signature11) (002) "cdr" types (002) "cdr" identifiers
+
 (*) number1 number2
 comment:
 #true
@@ -121,7 +256,7 @@ comment:
 (clause-arity) "clause"
 comment:
 #true
-(002) "length" (clause-arguments) "clause"
+(003) "/" (003) "-" (002) "length" (clause-arguments) "clause" 1 2
 
 (clause-body) "clause"
 comment:
@@ -196,7 +331,27 @@ comment:
 (comp!aa) "programized"
 comment:
 #true
-(002) "write" "programized"
+(comp!aaa) "programized" (001) "open-output-string"
+
+
+(comp!aaa) "programized" "output-string"
+comment:
+#true
+(003) "begin" 
+         (003) "write" "programized" "output-string"
+         (comp!aaaa) (pop) (002) "read" (002) "open-input-string" (002) "get-output-string" "output-string"
+
+(comp!aaaa) "program"
+comment:
+#true
+(003) "begin"
+         (003) "for-each" printSignature "program"
+         (003) "for-each" printFunction "program"
+
+(printSignature) "function"
+comment:
+#true
+(003) "begin" (003) "for-each" "display" (makeFunctionSignature) (top) (pop) "function" (002) "display" #;
 
 (comp)
 comment:
@@ -442,6 +597,11 @@ comment:
 comment:
 #true
 (003) "begin" (drr) "garbage" "value"
+
+(halve) number
+comment:
+#true
+(/) number 2
 
 (leading-newline) "program"
 comment:
