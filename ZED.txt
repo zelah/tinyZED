@@ -1,8 +1,7 @@
 (printFunction) function
 comment:
 #true
-(003) "begin" (003) "for-each" "display" (makeFunctionSignature) (top) (pop) function
-                      (002) "display" (makeFunctionBody) (pop) (reverse) (pop) (reverse) (top) (pop) (pop) function
+(003) "begin" (003) "for-each" "display" (makeFunctionSignature) (top) (pop) function (002) "display" (makeFunctionBody) (pop) (reverse) (pop) (reverse) (top) (pop) (pop) function
 
 (makeFunctionBody) arms
 comment:
