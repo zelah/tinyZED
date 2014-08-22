@@ -11,7 +11,7 @@ comment:
 (-) number1 number2
 comment:
 #true
-(003) "-" number1 numbe2
+(003) "-" number1 number2
 
 (/) number1 number2
 comment:
